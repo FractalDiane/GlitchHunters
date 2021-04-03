@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float speed = 10f;
 
-	Vector2 mouseInput;
-
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
@@ -39,14 +37,19 @@ public class Player : MonoBehaviour
 		horizontal = Input.GetAxisRaw("Horizontal");
 		vertical = Input.GetAxisRaw("Vertical");
 
-		mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-
 		RaycastHit hit;
 		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
 
 		if (onGround && Input.GetButtonDown("Jump"))
 		{
 			rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+		}
+
+		if (rigidbody.velocity.y > 0f && !Input.GetButton("Jump"))
+		{
+			Vector3 vel = rigidbody.velocity;
+			vel.y -= 100f * Time.deltaTime;
+			rigidbody.velocity = vel;
 		}
 
 		Quaternion currentRot = sprite.transform.rotation;
@@ -68,12 +71,5 @@ public class Player : MonoBehaviour
 		Vector3 result = target * speed;
 		result.y = rigidbody.velocity.y;
 		rigidbody.velocity = result;
-
-		RotateCamera();
-	}
-
-	void RotateCamera()
-	{
-		cameraPivot.transform.RotateAround(cameraPivot.transform.position, new Vector3(0, 1, 0), mouseInput.x * 10f);
 	}
 }
