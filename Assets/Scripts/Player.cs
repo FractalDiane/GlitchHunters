@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	SpriteRenderer sprite;
-	Camera playerCamera;
 	new Rigidbody rigidbody;
 
 	const float JumpForce = 20.0f;
@@ -27,7 +26,6 @@ public class Player : MonoBehaviour
 	{
 		rigidbody = GetComponent<Rigidbody>();
 		sprite = GetComponentInChildren<SpriteRenderer>();
-		playerCamera = GetComponentInChildren<Camera>();
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
@@ -54,7 +52,7 @@ public class Player : MonoBehaviour
 
 		Quaternion currentRot = sprite.transform.rotation;
 		Transform xform = sprite.transform;
-		xform.LookAt(playerCamera.transform.position, Vector3.up);
+		xform.LookAt(Camera.main.transform.position, Vector3.up);
 		Quaternion newRot = xform.rotation;
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
 	}
@@ -62,7 +60,7 @@ public class Player : MonoBehaviour
 	void FixedUpdate()
 	{
 		Vector3 target = new Vector3(horizontal, 0f, vertical);
-		target =  playerCamera.transform.TransformDirection(target);
+		target =  Camera.main.transform.TransformDirection(target);
 		if (horizontal != 0f || vertical != 0f)
 		{
 			target.Normalize();
