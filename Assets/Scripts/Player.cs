@@ -22,10 +22,16 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float speed = 10f;
 
+	Vector3 addedVelocity = Vector3.zero;
+	public Vector3 AddedVelocity { get => addedVelocity; set => addedVelocity = value; }
+	bool onPlatform = false;
+	public bool OnPlatform { get => onPlatform; set => onPlatform = value; }
+
 	bool lockMovement = false;
 	public bool LockMovement { get => lockMovement; set => lockMovement = value; }
 	bool lockCamera = false;
 	public bool LockCamera { get => lockCamera; set => lockCamera = value; }
+	
 
 	void Start()
 	{
@@ -50,6 +56,10 @@ public class Player : MonoBehaviour
 
 		RaycastHit hit;
 		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
+		if (onGround && !onPlatform)
+		{
+			addedVelocity = Vector3.zero;
+		}
 
 		if (onGround && !lockMovement && Input.GetButtonDown("Jump"))
 		{
@@ -81,6 +91,6 @@ public class Player : MonoBehaviour
 
 		Vector3 result = target * speed;
 		result.y = rigidbody.velocity.y;
-		rigidbody.velocity = result;
+		rigidbody.velocity = result + AddedVelocity;
 	}
 }
