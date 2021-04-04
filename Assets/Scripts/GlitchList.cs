@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 
 public class GlitchList : MonoBehaviour
 {
+	UnityEvent menuClosed;
+	public UnityEvent MenuClosed { get => menuClosed; }
+
+	bool isMenuOpen = false;
+
+	void Awake()
+	{
+		menuClosed = new UnityEvent();
+	}
+
 	void Start()
 	{
 		Cursor.lockState = CursorLockMode.None;
@@ -14,18 +24,31 @@ public class GlitchList : MonoBehaviour
 
 	void Update()
 	{
-		
+		if (Input.GetButtonDown("Pause") && isMenuOpen)
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+			GetComponent<Animator>().Play("Disappear");
+			Invoke(nameof(CloseMenu), 0.8f);
+		}
 	}
 
-	public void ShowList(Dictionary<string, bool> glitches)
+	public void ShowList(Dictionary<string, GlitchProgress.Glitch> glitches)
 	{
 		TextMeshProUGUI text = GetComponentInChildren<TextMeshProUGUI>();
 		text.text = string.Empty;
 		foreach (var pair in glitches)
 		{
-			text.text += $"{(pair.Value ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Key}\n";
+			text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
 		}
 
-		GetComponent<Animator>().Play("Show");
+		GetComponent<Animator>().Play("Appear");
+		isMenuOpen = true;
+	}
+
+	void CloseMenu()
+	{
+		menuClosed.Invoke();
+		Destroy(gameObject);
 	}
 }
