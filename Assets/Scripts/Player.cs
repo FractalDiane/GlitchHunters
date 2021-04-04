@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	public struct Glitch
+	{
+		string longText;
+		bool completed;
+	}
+
 	SpriteRenderer sprite;
 	new Rigidbody rigidbody;
 
@@ -18,6 +24,9 @@ public class Player : MonoBehaviour
 
 	[SerializeField]
 	GameObject cameraPivot = null;
+
+	[SerializeField]
+	GameObject glitchListPrefab = null;
 
 	[SerializeField]
 	float speed = 10f;
@@ -66,6 +75,17 @@ public class Player : MonoBehaviour
 		xform.LookAt(Camera.main.transform.position, Vector3.up);
 		Quaternion newRot = xform.rotation;
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
+
+		if (!lockMovement && Input.GetButtonDown("Pause"))
+		{
+			lockMovement = true;
+			var menu = Instantiate(glitchListPrefab, Vector3.zero, Quaternion.identity);
+			menu.GetComponent<GlitchList>().ShowList(new Dictionary<string, bool>(){
+				{"Do a thing", false},
+				{"Do another thing", false},
+				{"Thing you've already done", true},
+			});
+		}
 	}
 
 	void FixedUpdate()
