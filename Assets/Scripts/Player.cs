@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float speed = 10f;
 
+	bool lockMovement = false;
+	public bool LockMovement { get => lockMovement; set => lockMovement = value; }
+
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
@@ -32,18 +35,26 @@ public class Player : MonoBehaviour
 
 	void Update()
 	{
-		horizontal = Input.GetAxisRaw("Horizontal");
-		vertical = Input.GetAxisRaw("Vertical");
+		if (!lockMovement) 
+		{
+			horizontal = Input.GetAxisRaw("Horizontal");
+			vertical = Input.GetAxisRaw("Vertical");
+		}
+		else
+		{
+			horizontal = 0f;
+			vertical = 0f;
+		}
 
 		RaycastHit hit;
 		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
 
-		if (onGround && Input.GetButtonDown("Jump"))
+		if (onGround && !lockMovement && Input.GetButtonDown("Jump"))
 		{
 			rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
 		}
 
-		if (rigidbody.velocity.y > 0f && !Input.GetButton("Jump"))
+		if (rigidbody.velocity.y > 0f && (!Input.GetButton("Jump") || lockMovement))
 		{
 			Vector3 vel = rigidbody.velocity;
 			vel.y -= 100f * Time.deltaTime;
