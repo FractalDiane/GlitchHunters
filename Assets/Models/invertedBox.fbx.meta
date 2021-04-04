@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: 5b06ea15d88f61148a1035280d23417d
+guid: f3e03ffe5006e4a43ae204079db812b5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Neon
-    second: {fileID: 2100000, guid: a17b2d4621a17f5458fec20de09c1ff4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NeonMagenta
-    second: {fileID: 2100000, guid: d21be1feaf1551b499ae4ffa2c63404b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NeonOrange
-    second: {fileID: 2100000, guid: 8698d6f430716c247bfc2157b868db90, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NeonRed
-    second: {fileID: 2100000, guid: abfe0b957a256c447ae33f2e00153989, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

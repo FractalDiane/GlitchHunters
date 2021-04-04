@@ -5,6 +5,8 @@ using UnityEngine;
 public class TurnByParentVelocity : MonoBehaviour
 {
     public Rigidbody rb;
+    public float minVelocity;
+    public Vector3 lastDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,11 @@ public class TurnByParentVelocity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity != Vector3.zero) {
-            transform.rotation = Quaternion.LookRotation(rb.velocity);
+        if(Mathf.Abs(rb.velocity.x)>minVelocity || Mathf.Abs(rb.velocity.z)>minVelocity) {
+            lastDirection.x = rb.velocity.x;
+            lastDirection.z = rb.velocity.z;
         }
+        lastDirection.y = rb.velocity.y;
+        transform.rotation = Quaternion.LookRotation(lastDirection);
     }
 }
