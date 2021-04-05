@@ -23,7 +23,7 @@ public class PlayerUI : MonoBehaviour
 	Player playerScript = null;
 
 	[SerializeField]
-	TextMeshPro completedGlitchText = null;
+	TextMeshProUGUI completedGlitchText = null;
 
 	//[SerializeField]
 	//GameObject glitchListPrefab = null;
@@ -44,6 +44,12 @@ public class PlayerUI : MonoBehaviour
 	{
 		completedGlitchText.text = glitchText;
 		GetComponent<AudioSource>().Play();
-		GetComponent<Animator>().Play(newAvailable ? "GlitchCompletedNewAvailable" : "GlitchCompleted");
+		GetComponent<Animator>().Play(newAvailable ? "GlitchFoundNewAvailable" : "GlitchFound");
+		Invoke(nameof(FinishGlitchCompletedAnimation), 4f);
+	}
+
+	void FinishGlitchCompletedAnimation()
+	{
+		GetComponent<Animator>().Play("GlitchFoundDisappear");
 	}
 }
