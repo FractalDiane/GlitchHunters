@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 	SpriteRenderer sprite;
 	new Rigidbody rigidbody;
+	AudioSource spinSound;
+	Animator animator;
 
 	const float JumpForce = 20.0f;
 
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
 	float vertical = 0f;
 
 	bool onGround = false;
+	bool canSpin = true;
 	[SerializeField]
 	LayerMask collisionMask;
 
@@ -37,6 +40,8 @@ public class Player : MonoBehaviour
 	{
 		rigidbody = GetComponent<Rigidbody>();
 		sprite = GetComponentInChildren<SpriteRenderer>();
+		spinSound = GetComponent<AudioSource>();
+		animator = GetComponent<Animator>();
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
@@ -56,14 +61,18 @@ public class Player : MonoBehaviour
 
 		RaycastHit hit;
 		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
-		if (onGround && !onPlatform)
+		if (onGround)
 		{
-			addedVelocity = Vector3.zero;
-		}
+			canSpin = true;
+			if (!onPlatform)
+			{
+				addedVelocity = Vector3.zero;
+			}
 
-		if (onGround && !lockMovement && Input.GetButtonDown("Jump"))
-		{
-			rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+			if (!lockMovement && Input.GetButtonDown("Jump"))
+			{
+				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+			}
 		}
 
 		if (rigidbody.velocity.y > 0f && (!Input.GetButton("Jump") || lockMovement))
@@ -71,6 +80,17 @@ public class Player : MonoBehaviour
 			Vector3 vel = rigidbody.velocity;
 			vel.y -= 100f * Time.deltaTime;
 			rigidbody.velocity = vel;
+		}
+
+		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
+		{
+			spinSound.Play();
+			animator.Play("Spin");
+			Vector3 vel = rigidbody.velocity;
+			vel.y = 0f;
+			rigidbody.velocity = vel;
+			rigidbody.AddForce(new Vector3(0, 18f, 0), ForceMode.Impulse);
+			canSpin = false;
 		}
 
 		Quaternion currentRot = sprite.transform.rotation;
