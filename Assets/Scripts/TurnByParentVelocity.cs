@@ -7,6 +7,7 @@ public class TurnByParentVelocity : MonoBehaviour
     public Rigidbody rb;
     public float minVelocity;
     public Vector3 lastDirection;
+    public float yModifier = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class TurnByParentVelocity : MonoBehaviour
             lastDirection.x = rb.velocity.x;
             lastDirection.z = rb.velocity.z;
         }
-        lastDirection.y = rb.velocity.y;
+        lastDirection.y = rb.velocity.y*yModifier;
         transform.rotation = Quaternion.LookRotation(lastDirection);
     }
 }
