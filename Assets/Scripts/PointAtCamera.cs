@@ -5,6 +5,7 @@ using UnityEngine;
 public class PointAtCamera : MonoBehaviour
 {
     public Transform cameraTransform;
+    public float yModifier = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,9 @@ public class PointAtCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transform.forward = cameraTransform.forward;
+         Vector3 forw = cameraTransform.forward;
+         forw.y *= yModifier;
+         transform.forward = forw;
 
     }
 }
