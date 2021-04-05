@@ -14,6 +14,9 @@ public class GlitchList : MonoBehaviour
 	AudioSource soundOpen;
 	AudioSource soundClose;
 
+	[SerializeField]
+	TextMeshProUGUI listText;
+
 	void Awake()
 	{
 		menuClosed = new UnityEvent();
@@ -44,17 +47,17 @@ public class GlitchList : MonoBehaviour
 
 	public void ShowList(Dictionary<string, GlitchProgress.Glitch> glitches)
 	{
-		TextMeshProUGUI text = GetComponentInChildren<TextMeshProUGUI>();
-		text.text = string.Empty;
+		listText.text = string.Empty;
 		foreach (var pair in glitches)
 		{
 			if (pair.Value.available)
 			{
-				text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+				//listText.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+				listText.text += $"• {(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.longText}{(pair.Value.completed ? "</s></color>" : "")}\n";
 			}
 			else
 			{
-				text.text += "    <color=grey>[???]</color>\n";
+				listText.text += "    <color=grey>[???]</color>\n";
 			}
 		}
 
