@@ -1,10 +1,11 @@
 ﻿// Halftone shader
 // By Ronja Böhringer
 // https://github.com/ronja-tutorials/ShaderTutorials
+// Modified with outline pass
 
 Shader "Tutorial/040_DitheredLighting" {
 	//show values to edit in inspector
-	Properties{
+	Properties {
 		_Color("Tint", Color) = (0, 0, 0, 1)
 		_MainTex("Texture", 2D) = "white" {}
 		[HDR] _Emission("Emission", color) = (0,0,0)
@@ -15,10 +16,13 @@ Shader "Tutorial/040_DitheredLighting" {
         _RemapInputMax ("Remap input max value", Range(0, 1)) = 1
         _RemapOutputMin ("Remap output min value", Range(0, 1)) = 0
         _RemapOutputMax ("Remap output max value", Range(0, 1)) = 1
+
+		_OutlineSize ("Outline Size", Float) = 1.0
+		_OutlineColor ("Outline Color", Color) = (0, 0, 0, 1)
 	}
-		SubShader{
+		SubShader {
 		//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
-		Tags{ "RenderType" = "Opaque" "Queue" = "Geometry"}
+		Tags { "RenderType" = "Opaque" "Queue" = "Geometry"}
 
 		CGPROGRAM
 
@@ -110,6 +114,40 @@ Shader "Tutorial/040_DitheredLighting" {
 			o.ScreenPos.x = o.ScreenPos.x * aspect;
 		}
 		ENDCG
+
+		/*Pass {
+			Cull Front
+			CGPROGRAM
+			#pragma target 3.0
+			#pragma vertex vert
+			#pragma fragment frag
+
+			struct appdata {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+				float3 normal : NORMAL;
+            };
+
+            struct v2f {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
+
+			float _OutlineSize;
+			fixed4 _OutlineColor;
+
+			v2f vert(appdata v) {
+				v2f o;
+				o.vertex = UnityObjectToClipPos(v.vertex * _OutlineSize);
+				return o;
+			}
+
+			fixed4 frag(v2f i) : COLOR {
+				return _OutlineColor;
+			}
+
+			ENDCG
+		}*/
 	}
 		FallBack "Standard"
 }

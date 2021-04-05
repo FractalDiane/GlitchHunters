@@ -47,7 +47,18 @@ MonoBehaviour:
   startingGlitches:
   - identifier: test_1
     longText: Do a thing
+    prerequisites: []
+    requiresAllPrerequisites: 0
   - identifier: test_2
     longText: Do another thing
+    prerequisites: []
+    requiresAllPrerequisites: 0
   - identifier: test_3
     longText: Do a third thing
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: locked
+    longText: This thing is locked
+    prerequisites:
+    - test_1
+    requiresAllPrerequisites: 0

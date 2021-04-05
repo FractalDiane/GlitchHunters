@@ -39,7 +39,14 @@ public class GlitchList : MonoBehaviour
 		text.text = string.Empty;
 		foreach (var pair in glitches)
 		{
-			text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+			if (pair.Value.available)
+			{
+				text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+			}
+			else
+			{
+				text.text += "    <color=grey>[???]</color>\n";
+			}
 		}
 
 		GetComponent<Animator>().Play("Appear");
