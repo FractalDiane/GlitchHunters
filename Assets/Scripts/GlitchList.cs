@@ -11,6 +11,9 @@ public class GlitchList : MonoBehaviour
 
 	bool isMenuOpen = false;
 
+	AudioSource soundOpen;
+	AudioSource soundClose;
+
 	void Awake()
 	{
 		menuClosed = new UnityEvent();
@@ -20,12 +23,18 @@ public class GlitchList : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
+
+		AudioSource[] sources = GetComponents<AudioSource>();
+		soundOpen = sources[0];
+		soundClose = sources[1];
+		soundOpen.Play();
 	}
 
 	void Update()
 	{
 		if (Input.GetButtonDown("Pause") && isMenuOpen)
 		{
+			soundClose.Play();
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 			GetComponent<Animator>().Play("Disappear");
@@ -39,7 +48,14 @@ public class GlitchList : MonoBehaviour
 		text.text = string.Empty;
 		foreach (var pair in glitches)
 		{
-			text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+			if (pair.Value.available)
+			{
+				text.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
+			}
+			else
+			{
+				text.text += "    <color=grey>[???]</color>\n";
+			}
 		}
 
 		GetComponent<Animator>().Play("Appear");

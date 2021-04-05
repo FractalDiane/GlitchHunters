@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,13 +31,30 @@ public class GlitchProgress : MonoBehaviour
 	{
 		public string identifier;
 		public string longText;
+		public string[] prerequisites;
+		public bool requiresAllPrerequisites;
 	}
 
 	public struct Glitch
 	{
 		public string longText;
 		public bool completed;
-		public Glitch(string longText) { this.longText = longText; completed = false; }
+		public bool available;
+		public bool requiresAllPrerequisites;
+		public Dictionary<string, bool> prerequisites;
+		public Glitch(string longText, string[] prerequisites, bool requiresAllPrerequisites)
+		{
+			this.longText = longText;
+			this.requiresAllPrerequisites = requiresAllPrerequisites;
+			available = prerequisites.Length == 0;
+			completed = false;
+
+			this.prerequisites = new Dictionary<string, bool>();
+			foreach (string prereq in prerequisites)
+			{
+				this.prerequisites.Add(prereq, false);
+			}
+		}
 	}
 
 	[SerializeField]
@@ -51,7 +68,7 @@ public class GlitchProgress : MonoBehaviour
 	{
 		foreach (GlitchData data in startingGlitches)
 		{
-			glitches.Add(data.identifier, new Glitch(data.longText));
+			glitches.Add(data.identifier, new Glitch(data.longText, data.prerequisites, data.requiresAllPrerequisites));
 		}
 
 		playerScript = FindObjectOfType<Player>();
@@ -72,9 +89,42 @@ public class GlitchProgress : MonoBehaviour
 
 	public void CompleteGlitch(string identifier)
 	{
+		if (!glitches[identifier].completed)
+		{
+			Glitch glitch = glitches[identifier];
+			glitch.completed = true;
+			glitches[identifier] = glitch;
+
+			// THIS IS HORRIBLE
+			bool anyUnlocked = false;
+			string[] keys = glitches.Keys.ToArray();
+			for (int i = 0; i < keys.Length; i++)
+			{
+				string thisKey = keys[i];	
+				Glitch thisGlitch = glitches[thisKey];
+				if (!thisGlitch.available && thisGlitch.prerequisites.ContainsKey(identifier))
+				{
+					thisGlitch.prerequisites[identifier] = true;
+					glitches[thisKey] = thisGlitch;
+					if (!thisGlitch.requiresAllPrerequisites || thisGlitch.prerequisites.Values.All(b => b))
+					{
+						UnlockGlitch(thisKey);
+						anyUnlocked = true;
+					}
+				}
+			}
+
+			PlayerUI.Singleton.PlayGlitchCompletedAnimation(glitches[identifier].longText, anyUnlocked);
+		}
+	}
+
+
+	void UnlockGlitch(string identifier)
+	{
 		Glitch glitch = glitches[identifier];
-		glitch.completed = true;
+		glitch.available = true;
 		glitches[identifier] = glitch;
+		Debug.Log($"GLITCH UNLOCKED: {identifier}");
 	}
 
 	
