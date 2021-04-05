@@ -55,7 +55,7 @@ AnimationClip:
         time: 0.5
         value: {x: 0, y: -990, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: Infinity, y: Infinity, z: Infinity}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -63,7 +63,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: GameObject
+    path: Scooter/AnimRotation
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -83,7 +83,7 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1482111001
+      path: 1614286586
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -211,7 +211,7 @@ AnimationClip:
         time: 0.5
         value: 0
         inSlope: 0
-        outSlope: Infinity
+        outSlope: 0
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
@@ -220,7 +220,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: GameObject
+    path: Scooter/AnimRotation
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -239,7 +239,7 @@ AnimationClip:
         time: 0.5
         value: -990
         inSlope: 0
-        outSlope: Infinity
+        outSlope: 0
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
@@ -248,7 +248,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: GameObject
+    path: Scooter/AnimRotation
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -267,7 +267,7 @@ AnimationClip:
         time: 0.5
         value: 0
         inSlope: 0
-        outSlope: Infinity
+        outSlope: 0
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
@@ -276,7 +276,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: GameObject
+    path: Scooter/AnimRotation
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -287,36 +287,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: GameObject
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: GameObject
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: GameObject
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
     path: GameObject (1)/test218x338
     classID: 4
     script: {fileID: 0}
@@ -327,6 +297,16 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
+    path: GameObject (1)/test218x338
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
     path: GameObject (1)/test218x338
     classID: 4
     script: {fileID: 0}
@@ -337,7 +317,27 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: GameObject (1)/test218x338
+    path: Scooter/AnimRotation
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Scooter/AnimRotation
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Scooter/AnimRotation
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

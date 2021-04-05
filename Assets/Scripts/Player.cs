@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
 			rigidbody.velocity = vel;
 		}
 
-		/*if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
+		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
 		{
 			spinSound.Play();
 			animator.Play("Spin");
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
 			rigidbody.velocity = vel;
 			rigidbody.AddForce(new Vector3(0, 18f, 0), ForceMode.Impulse);
 			canSpin = false;
-		}*/
+		}
 
 		Quaternion currentRot = sprite.transform.rotation;
 		Transform xform = sprite.transform;
