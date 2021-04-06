@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569535ff87eda514382ef02f9c45fc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackGlitches: 1
   collisionMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1027,6 +1028,30 @@ PrefabInstance:
     - target: {fileID: 5630624992033430377, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.8901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.3882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.89404595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430391, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.8065504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
