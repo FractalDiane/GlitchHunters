@@ -124,9 +124,15 @@ public class Player : MonoBehaviour
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
 
 		// *** GLITCH DETECTION: MEGA JUMP ***
-		if (trackGlitches && jumpedRecently && spunRecently && rigidbody.velocity.y >= 14f)
+		if (trackGlitches && jumpHeight >= 18f)
 		{
 			GlitchProgress.Singleton.CompleteGlitch("megajump");
+		}
+
+		// *** GLITCH DETECTION: DOUBLE MEGA JUMP 20 DELUXE ***
+		if (trackGlitches && jumpHeight >= 20f)
+		{
+			GlitchProgress.Singleton.CompleteGlitch("jump_20");
 		}
 	}
 
