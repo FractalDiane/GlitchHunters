@@ -31,6 +31,8 @@ public class Dialogue : MonoBehaviour
 	[SerializeField]
 	AudioClip[] textSounds;
 
+	AudioSource soundClose;
+
 	float soundPitch = 1f;
 	public float SoundPitch { set => soundPitch = value; }
 
@@ -41,6 +43,8 @@ public class Dialogue : MonoBehaviour
 		text = textObject.GetComponent<TextMeshProUGUI>();
 		name = nameObject.GetComponent<TextMeshProUGUI>();
 		textbox = GetComponentInChildren<Image>();
+		AudioSource[] sources = GetComponents<AudioSource>();
+		soundClose = sources[1];
 	}
 
 	void Update()
@@ -66,13 +70,17 @@ public class Dialogue : MonoBehaviour
 					if (dialoguePage < dialogueText.Length - 1)
 					{
 						visibleCharacters = 0;
+						text.maxVisibleCharacters = 0;
 						dialoguePage++;
 						text.text = dialogueText[dialoguePage];
+						rollText = false;
+						Invoke(nameof(RollText), 0.05f);
 					}
 					else
 					{
-						host.EndDialogue();
-						Destroy(gameObject);
+						soundClose.Play();
+						GetComponent<Animator>().Play("Disappear");
+						Invoke(nameof(DestroySelf), 0.48f);
 					}
 				}
 			}
@@ -81,12 +89,25 @@ public class Dialogue : MonoBehaviour
 
 	public void StartDialogue(string[] text, string npcName, NPC newHost)
 	{
+		GetComponent<AudioSource>().Play();
 		host = newHost;
 		nameObject.GetComponent<TextMeshProUGUI>().text = npcName;
 		var txt = GetComponentInChildren<TextMeshProUGUI>();
 		txt.maxVisibleCharacters = 0;
 		dialogueText = text;
 		txt.text = dialogueText[0];
+		GetComponent<Animator>().Play("Appear");
+		Invoke(nameof(RollText), 0.5f);
+	}
+
+	void RollText()
+	{
 		rollText = true;
+	}
+
+	void DestroySelf()
+	{
+		host.EndDialogue();
+		Destroy(gameObject);
 	}
 }

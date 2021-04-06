@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
 
 		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
 		{
-			spinSound.pitch = Random.Range(1f, 1.6f);
+			//spinSound.pitch = Random.Range(1f, 1.6f);
 			spinSound.Play();
 			animator.Play("Spin");
 			trickParticles.Play();

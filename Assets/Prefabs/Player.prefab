@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676713153031837}
   - component: {fileID: 2882676713153031836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: E-Scooter-Transparent-Background-PNG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676713245911917}
   - component: {fileID: 2882676713245911891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: test218x338
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2882676713530400619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 2882676713839536458}
   - component: {fileID: 2882676713839536457}
   - component: {fileID: 2882676713839536456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676713868501727}
   - component: {fileID: 2882676713868501726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: E-Scooter-Transparent-Background-PNG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,9 +389,9 @@ GameObject:
   - component: {fileID: 2882676714119102760}
   - component: {fileID: 847455256974773887}
   - component: {fileID: 5780839424653519965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -504,7 +504,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 483f14b7df757d04390d23fa0a5ca0f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c9d6e8a3718c3744e9d49987abda4290, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 2882676714246831423}
   - component: {fileID: 2882676714246831422}
   - component: {fileID: 2882676714246831421}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676714282348710}
   - component: {fileID: 2882676714282348709}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: E-Scooter-Transparent-Background-PNG (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676714543807614}
   - component: {fileID: 4109822291036402472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Scooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2882676714751969505}
   - component: {fileID: 2882676714751969504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: E-Scooter-Transparent-Background-PNG (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2201645435275710761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AnimRotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,6 +953,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trick Sparks
       objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099885, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610865701998, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cedf15c7785920d448648e086b0043e5, type: 3}
 --- !u!4 &5508090284104835754 stripped
@@ -975,6 +983,10 @@ PrefabInstance:
     - target: {fileID: 5630624992033430376, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
       propertyPath: m_Name
       value: Glitch Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630624992033430376, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5630624992033430377, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
       propertyPath: m_RootOrder
