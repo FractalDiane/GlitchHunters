@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 	bool onGround = false;
 	bool canSpin = true;
 	bool spunRecently = false;
+	bool spinWaitForNotGrounded = false;
 	bool jumpedRecently = false;
 
 	[SerializeField]
@@ -56,6 +57,8 @@ public class Player : MonoBehaviour
 
 	void Update()
 	{
+		bool spinning = IsSpinning();
+
 		if (!lockMovement) 
 		{
 			horizontal = Input.GetAxisRaw("Horizontal");
@@ -69,10 +72,12 @@ public class Player : MonoBehaviour
 
 		RaycastHit hit;
 		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
+		bool jumpedOnThisFrame = false;
 		if (onGround)
 		{
 			canSpin = true;
-			spunRecently = false;
+			if(!spinWaitForNotGrounded)
+				spunRecently = false;
 			if (!onPlatform)
 			{
 				addedVelocity = Vector3.zero;
@@ -83,15 +88,25 @@ public class Player : MonoBehaviour
 				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
 				jumpedRecently = true;
 				Invoke(nameof(UnsetJumpedRecently), 0.5f);
-				
+				jumpedOnThisFrame = true;
+				// *** GLITCH DETECTION: MEGA JUMP ***
+				if (trackGlitches && spinning)
+				{
+					GlitchProgress.Singleton.CompleteGlitch("megajump");
+					spunRecently = true;
+				}
 			}
 			jumpStartHeight = transform.position.y;
 			jumpHeight = 0;
 		} else {
 			float currentJumpHeight = transform.position.y-jumpStartHeight;
+			// float currentJumpHeight = rigidbody.velocity.y;
 			if(currentJumpHeight > jumpHeight) {
 				jumpHeight = currentJumpHeight;
 				PlayerUI.Singleton.DisplayJumpHeight(jumpHeight);
+			}
+			if(spinWaitForNotGrounded) {
+				spinWaitForNotGrounded = false;
 			}
 		}
 
@@ -105,6 +120,14 @@ public class Player : MonoBehaviour
 
 		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
 		{
+			if(trackGlitches && spinning)
+			{
+				GlitchProgress.Singleton.CompleteGlitch("double_spin");
+			}
+			if (trackGlitches && jumpedOnThisFrame)
+			{
+				GlitchProgress.Singleton.CompleteGlitch("megajump");
+			}
 			spinSound.Play();
 			animator.Play("Spin");
 			trickParticles.Play();
@@ -115,6 +138,7 @@ public class Player : MonoBehaviour
 			canSpin = false;
 
 			spunRecently = true;
+			spinWaitForNotGrounded = true;
 			//Invoke(nameof(UnsetSpunRecently), 0.5f);
 		}
 
@@ -124,17 +148,19 @@ public class Player : MonoBehaviour
 		Quaternion newRot = xform.rotation;
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
 
-		// *** GLITCH DETECTION: MEGA JUMP ***
-		if (trackGlitches && jumpHeight >= 5f && !spunRecently)
+		// *** GLITCH DETECTION: slope jump ***
+		if (trackGlitches && jumpHeight >= 5f && !spunRecently && !spinning)
 		{
 			GlitchProgress.Singleton.CompleteGlitch("jump_5");
 		}
 
-		// *** GLITCH DETECTION: MEGA JUMP ***
-		if (trackGlitches && jumpHeight >= 18f)
-		{
-			GlitchProgress.Singleton.CompleteGlitch("megajump");
-		}
+		
+
+		// // *** GLITCH DETECTION: MEGA JUMP ***
+		// if (trackGlitches && jumpHeight >= 18f)
+		// {
+		// 	GlitchProgress.Singleton.CompleteGlitch("megajump");
+		// }
 
 		// *** GLITCH DETECTION: DOUBLE MEGA JUMP 20 DELUXE ***
 		if (trackGlitches && jumpHeight >= 20f)
@@ -160,5 +186,9 @@ public class Player : MonoBehaviour
 	void UnsetJumpedRecently()
 	{
 		jumpedRecently = false;
+	}
+
+	bool IsSpinning() {
+		return animator.GetCurrentAnimatorStateInfo(0).IsName("Spin");
 	}
 }

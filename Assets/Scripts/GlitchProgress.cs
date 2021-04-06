@@ -6,6 +6,7 @@ public class GlitchProgress : MonoBehaviour
 {
 	static GlitchProgress singleton = null;
 	public static GlitchProgress Singleton { get => singleton; }
+	public bool awlaysRepeat = false;
 	void Awake()
 	{
 		if (singleton == null)
@@ -92,7 +93,7 @@ public class GlitchProgress : MonoBehaviour
 
 	public void CompleteGlitch(string identifier)
 	{
-		if (!glitches[identifier].completed)
+		if (awlaysRepeat||!glitches[identifier].completed)
 		{
 			Glitch glitch = glitches[identifier];
 			glitch.completed = true;
