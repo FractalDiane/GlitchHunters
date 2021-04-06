@@ -45,13 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glitchListPrefab: {fileID: 3096595897572968287, guid: 870071f297ba0a544a5b96e8570b56ef, type: 3}
   startingGlitches:
-  - identifier: test_1
-    text: Do a thing
+  - identifier: slope_jump
+    text: Do a slope jump
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
-  - identifier: test_2
-    text: Do another thing
+  - identifier: double_spin
+    text: Do a double sping jump
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
@@ -65,4 +65,44 @@ MonoBehaviour:
     description: 
     prerequisites:
     - test_1
+    requiresAllPrerequisites: 0
+  - identifier: ground_clip
+    text: Clip through the ground
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: fly_away
+    text: Defy Gravity
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: tower
+    text: Get on top of the tower in the square
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: stuck
+    text: Get stuck in a tube
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: door_clip
+    text: Clip your head through a door
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: jump_20
+    text: Do a 20m high jump
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: jump_5
+    text: jump over 5m without spinning
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: spin_8
+    text: Jump 7m in 0.5 A presses
+    description: 
+    prerequisites: []
     requiresAllPrerequisites: 0
