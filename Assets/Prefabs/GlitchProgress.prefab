@@ -77,7 +77,7 @@ MonoBehaviour:
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: tower
-    text: Get on top of the tower in the square
+    text: Get on top of the sloped tower
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
@@ -88,6 +88,11 @@ MonoBehaviour:
     requiresAllPrerequisites: 0
   - identifier: door_clip
     text: Clip your head through a door
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: air_clip
+    text: Clip your head through an air conditioner
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
@@ -103,6 +108,11 @@ MonoBehaviour:
     requiresAllPrerequisites: 0
   - identifier: spin_8
     text: Jump 7m in 0.5 A presses
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: sky_hideout
+    text: 'Find the hideout in the sky '
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
