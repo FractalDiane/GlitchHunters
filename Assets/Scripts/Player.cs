@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
 		if (onGround)
 		{
 			canSpin = true;
+			spunRecently = false;
 			if (!onPlatform)
 			{
 				addedVelocity = Vector3.zero;
@@ -114,7 +115,7 @@ public class Player : MonoBehaviour
 			canSpin = false;
 
 			spunRecently = true;
-			Invoke(nameof(UnsetSpunRecently), 0.5f);
+			//Invoke(nameof(UnsetSpunRecently), 0.5f);
 		}
 
 		Quaternion currentRot = sprite.transform.rotation;
@@ -122,6 +123,12 @@ public class Player : MonoBehaviour
 		xform.LookAt(Camera.main.transform.position, Vector3.up);
 		Quaternion newRot = xform.rotation;
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
+
+		// *** GLITCH DETECTION: MEGA JUMP ***
+		if (trackGlitches && jumpHeight >= 5f && !spunRecently)
+		{
+			GlitchProgress.Singleton.CompleteGlitch("jump_5");
+		}
 
 		// *** GLITCH DETECTION: MEGA JUMP ***
 		if (trackGlitches && jumpHeight >= 18f)
@@ -148,11 +155,6 @@ public class Player : MonoBehaviour
 		Vector3 result = target * speed;
 		result.y = rigidbody.velocity.y;
 		rigidbody.velocity = result + AddedVelocity;
-	}
-
-	void UnsetSpunRecently()
-	{
-		spunRecently = false;
 	}
 
 	void UnsetJumpedRecently()
