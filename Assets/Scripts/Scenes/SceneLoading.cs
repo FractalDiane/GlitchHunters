@@ -12,6 +12,10 @@ public class SceneLoading : MonoBehaviour
 
 	[SerializeField]
 	GameObject blockToHide = null;
+	[SerializeField]
+	GameObject sceneTransition = null;
+
+	bool loaded = false;
 
 	void Start()
 	{
@@ -35,5 +39,14 @@ public class SceneLoading : MonoBehaviour
 		GetComponent<AudioSource>().Play();
 		canvas.SetActive(false);
 		blockToHide.SetActive(false);
+		loaded = true;
+	}
+
+	void OnTriggerEnter(Collider collider)
+	{
+		if (loaded && collider.gameObject.tag == "Player")
+		{
+			Debug.Log("TEST");
+		}
 	}
 }
