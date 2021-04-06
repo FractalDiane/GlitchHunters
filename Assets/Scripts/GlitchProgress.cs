@@ -108,7 +108,7 @@ public class GlitchProgress : MonoBehaviour
 					glitches[thisKey] = thisGlitch;
 					if (!thisGlitch.requiresAllPrerequisites || thisGlitch.prerequisites.Values.All(b => b))
 					{
-						UnlockGlitch(thisKey);
+						UnlockGlitch(thisKey, false);
 						anyUnlocked = true;
 					}
 				}
@@ -119,12 +119,16 @@ public class GlitchProgress : MonoBehaviour
 	}
 
 
-	void UnlockGlitch(string identifier)
+	public void UnlockGlitch(string identifier, bool animation)
 	{
 		Glitch glitch = glitches[identifier];
 		glitch.available = true;
 		glitches[identifier] = glitch;
-		Debug.Log($"GLITCH UNLOCKED: {identifier}");
+
+		if (animation)
+		{
+			PlayerUI.Singleton.PlayGlitchUnlockedAnimation();
+		}
 	}
 
 	
