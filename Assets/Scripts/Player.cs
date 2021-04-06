@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
 				Invoke(nameof(UnsetJumpedRecently), 0.5f);
 				jumpedOnThisFrame = true;
 				// *** GLITCH DETECTION: MEGA JUMP ***
-				if (trackGlitches && spinning)
+				if (trackGlitches && spinning&&rigidbody.velocity.y>=0)
 				{
 					GlitchProgress.Singleton.CompleteGlitch("megajump");
 					spunRecently = true;
