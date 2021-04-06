@@ -88,7 +88,10 @@ public class Player : MonoBehaviour
 			jumpHeight = 0;
 		} else {
 			float currentJumpHeight = transform.position.y-jumpStartHeight;
-			if(currentJumpHeight > jumpHeight) jumpHeight = currentJumpHeight;
+			if(currentJumpHeight > jumpHeight) {
+				jumpHeight = currentJumpHeight;
+				PlayerUI.Singleton.DisplayJumpHeight(jumpHeight);
+			}
 		}
 
 		// Shorter jump if it isn't held down as long

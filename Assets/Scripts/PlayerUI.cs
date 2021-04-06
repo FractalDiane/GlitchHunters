@@ -39,7 +39,7 @@ public class PlayerUI : MonoBehaviour
 	// =========================================================================
 
 	public void DisplayJumpHeight(float height) {
-		
+		jumpHeightText.text = height + "m";
 	}
 
 	public void PlayGlitchCompletedAnimation(string glitchText, bool newAvailable)
