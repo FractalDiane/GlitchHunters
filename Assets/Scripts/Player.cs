@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
 
 	bool onGround = false;
 	bool canSpin = true;
+	bool spunRecently = false;
+	bool jumpedRecently = false;
+
 	[SerializeField]
 	LayerMask collisionMask;
 
@@ -72,9 +75,12 @@ public class Player : MonoBehaviour
 			if (!lockMovement && Input.GetButtonDown("Jump"))
 			{
 				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+				jumpedRecently = true;
+				Invoke(nameof(UnsetJumpedRecently), 0.5f);
 			}
 		}
 
+		// Shorter jump if it isn't held down as long
 		if (rigidbody.velocity.y > 0f && (!Input.GetButton("Jump") || lockMovement))
 		{
 			Vector3 vel = rigidbody.velocity;
@@ -84,7 +90,6 @@ public class Player : MonoBehaviour
 
 		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
 		{
-			//spinSound.pitch = Random.Range(1f, 1.6f);
 			spinSound.Play();
 			animator.Play("Spin");
 			trickParticles.Play();
@@ -93,6 +98,9 @@ public class Player : MonoBehaviour
 			rigidbody.velocity = vel;
 			rigidbody.AddForce(new Vector3(0, 18f, 0), ForceMode.Impulse);
 			canSpin = false;
+
+			spunRecently = true;
+			Invoke(nameof(UnsetSpunRecently), 0.5f);
 		}
 
 		Quaternion currentRot = sprite.transform.rotation;
@@ -100,6 +108,12 @@ public class Player : MonoBehaviour
 		xform.LookAt(Camera.main.transform.position, Vector3.up);
 		Quaternion newRot = xform.rotation;
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
+
+		// *** GLITCH DETECTION: MEGA JUMP ***
+		if (jumpedRecently && spunRecently && rigidbody.velocity.y >= 14f)
+		{
+			GlitchProgress.Singleton.CompleteGlitch("megajump");
+		}
 	}
 
 	void FixedUpdate()
@@ -114,5 +128,15 @@ public class Player : MonoBehaviour
 		Vector3 result = target * speed;
 		result.y = rigidbody.velocity.y;
 		rigidbody.velocity = result + AddedVelocity;
+	}
+
+	void UnsetSpunRecently()
+	{
+		spunRecently = false;
+	}
+
+	void UnsetJumpedRecently()
+	{
+		jumpedRecently = false;
 	}
 }

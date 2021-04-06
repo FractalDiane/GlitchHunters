@@ -23,6 +23,7 @@ public class PlayerUI : MonoBehaviour
 	Player playerScript = null;
 
 	bool partialAnimation = false;
+	bool newAvailableAnimation = false;
 
 	[SerializeField]
 	TextMeshProUGUI completedGlitchText = null;
@@ -32,19 +33,10 @@ public class PlayerUI : MonoBehaviour
 
 	// =========================================================================
 
-	void Start()
-	{
-		
-	}
-
-	void Update()
-	{
-		
-	}
-
 	public void PlayGlitchCompletedAnimation(string glitchText, bool newAvailable)
 	{
 		partialAnimation = false;
+		newAvailableAnimation = newAvailable;
 		completedGlitchText.text = glitchText;
 		GetComponent<AudioSource>().Play();
 		GetComponent<Animator>().Play(newAvailable ? "GlitchFoundNewAvailable" : "GlitchFound");
@@ -61,6 +53,6 @@ public class PlayerUI : MonoBehaviour
 
 	void FinishGlitchCompletedAnimation()
 	{
-		GetComponent<Animator>().Play(partialAnimation ? "GlitchFoundDisappear2" : "GlitchFoundDisappear");
+		GetComponent<Animator>().Play(partialAnimation ? "GlitchFoundDisappear2" : newAvailableAnimation ? "GlitchFoundDisappear" : "GlitchFoundDisappear3");
 	}
 }

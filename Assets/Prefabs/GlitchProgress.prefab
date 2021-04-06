@@ -46,19 +46,23 @@ MonoBehaviour:
   glitchListPrefab: {fileID: 3096595897572968287, guid: 870071f297ba0a544a5b96e8570b56ef, type: 3}
   startingGlitches:
   - identifier: test_1
-    longText: Do a thing
+    text: Do a thing
+    description: 
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: test_2
-    longText: Do another thing
+    text: Do another thing
+    description: 
     prerequisites: []
     requiresAllPrerequisites: 0
-  - identifier: test_3
-    longText: Do a third thing
+  - identifier: megajump
+    text: Mega jump
+    description: Jump with good timing after a spin trick
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: locked
-    longText: This thing is locked
+    text: This is unlocked now
+    description: 
     prerequisites:
     - test_1
     requiresAllPrerequisites: 0

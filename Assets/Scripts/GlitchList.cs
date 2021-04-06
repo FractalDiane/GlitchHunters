@@ -52,7 +52,6 @@ public class GlitchList : MonoBehaviour
 		{
 			if (pair.Value.available)
 			{
-				//listText.text += $"{(pair.Value.completed ? "<color=blue>✓</color>" : "<color=red>✗</color>")} {pair.Value.longText}\n";
 				listText.text += $"• {(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.longText}{(pair.Value.completed ? "</s></color>" : "")}\n";
 			}
 			else

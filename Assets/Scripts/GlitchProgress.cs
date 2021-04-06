@@ -30,7 +30,8 @@ public class GlitchProgress : MonoBehaviour
 	struct GlitchData
 	{
 		public string identifier;
-		public string longText;
+		public string text;
+		public string description;
 		public string[] prerequisites;
 		public bool requiresAllPrerequisites;
 	}
@@ -38,13 +39,15 @@ public class GlitchProgress : MonoBehaviour
 	public struct Glitch
 	{
 		public string longText;
+		public string description;
 		public bool completed;
 		public bool available;
 		public bool requiresAllPrerequisites;
 		public Dictionary<string, bool> prerequisites;
-		public Glitch(string longText, string[] prerequisites, bool requiresAllPrerequisites)
+		public Glitch(string longText, string description, string[] prerequisites, bool requiresAllPrerequisites)
 		{
 			this.longText = longText;
+			this.description = description;
 			this.requiresAllPrerequisites = requiresAllPrerequisites;
 			available = prerequisites.Length == 0;
 			completed = false;
@@ -68,7 +71,7 @@ public class GlitchProgress : MonoBehaviour
 	{
 		foreach (GlitchData data in startingGlitches)
 		{
-			glitches.Add(data.identifier, new Glitch(data.longText, data.prerequisites, data.requiresAllPrerequisites));
+			glitches.Add(data.identifier, new Glitch(data.text, data.description, data.prerequisites, data.requiresAllPrerequisites));
 		}
 
 		playerScript = FindObjectOfType<Player>();
