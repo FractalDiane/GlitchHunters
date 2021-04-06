@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5630624992033430377}
   - component: {fileID: 5630624992033430391}
   - component: {fileID: 5630624992033430390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glitch Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.09996439, g: 0.43666837, b: 0.4528302, a: 1}
+      minColor: {r: 0.57992166, g: 0.837095, b: 0.8490566, a: 1}
       maxColor: {r: 0.06190812, g: 0.86398447, b: 0.8867924, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -918,7 +918,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 3
       minScalar: 20
       maxCurve:
         serializedVersion: 2

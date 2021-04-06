@@ -984,10 +984,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glitch Trail
       objectReference: {fileID: 0}
-    - target: {fileID: 5630624992033430376, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5630624992033430377, guid: 34d369779d294ee46a705ab3d2d29b98, type: 3}
       propertyPath: m_RootOrder
       value: 1
