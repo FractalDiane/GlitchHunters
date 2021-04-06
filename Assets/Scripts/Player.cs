@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 	bool lockCamera = false;
 	public bool LockCamera { get => lockCamera; set => lockCamera = value; }
 	
+	public float jumpStartHeight;
+	public float jumpHeight;
 
 	void Start()
 	{
@@ -77,7 +79,13 @@ public class Player : MonoBehaviour
 				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
 				jumpedRecently = true;
 				Invoke(nameof(UnsetJumpedRecently), 0.5f);
+				
 			}
+			jumpStartHeight = transform.position.y;
+			jumpHeight = 0;
+		} else {
+			float currentJumpHeight = transform.position.y-jumpStartHeight;
+			if(currentJumpHeight > jumpHeight) jumpHeight = currentJumpHeight;
 		}
 
 		// Shorter jump if it isn't held down as long

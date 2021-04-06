@@ -27,11 +27,17 @@ public class PlayerUI : MonoBehaviour
 
 	[SerializeField]
 	TextMeshProUGUI completedGlitchText = null;
+	[SerializeField]
+	TextMeshProUGUI jumpHeightText = null;
 
 	//[SerializeField]
 	//GameObject glitchListPrefab = null;
 
 	// =========================================================================
+
+	public void DisplayJumpHeight(float height) {
+		
+	}
 
 	public void PlayGlitchCompletedAnimation(string glitchText, bool newAvailable)
 	{
