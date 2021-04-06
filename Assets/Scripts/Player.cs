@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 	bool jumpedRecently = false;
 
 	[SerializeField]
+	bool trackGlitches = true;
+
+	[SerializeField]
 	LayerMask collisionMask;
 
 	[SerializeField]
@@ -110,7 +113,7 @@ public class Player : MonoBehaviour
 		sprite.transform.rotation = Quaternion.Slerp(currentRot, newRot, 0.01f);
 
 		// *** GLITCH DETECTION: MEGA JUMP ***
-		if (jumpedRecently && spunRecently && rigidbody.velocity.y >= 14f)
+		if (trackGlitches && jumpedRecently && spunRecently && rigidbody.velocity.y >= 14f)
 		{
 			GlitchProgress.Singleton.CompleteGlitch("megajump");
 		}
