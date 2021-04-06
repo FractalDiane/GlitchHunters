@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 	LayerMask collisionMask;
 
 	[SerializeField]
-	GameObject cameraPivot = null;
+	ParticleSystem trickParticles = null;
 
 	[SerializeField]
 	float speed = 10f;
@@ -84,8 +84,10 @@ public class Player : MonoBehaviour
 
 		if (canSpin && !lockMovement && Input.GetButtonDown("Fire1"))
 		{
+			spinSound.pitch = Random.Range(1f, 1.6f);
 			spinSound.Play();
 			animator.Play("Spin");
+			trickParticles.Play();
 			Vector3 vel = rigidbody.velocity;
 			vel.y = 0f;
 			rigidbody.velocity = vel;

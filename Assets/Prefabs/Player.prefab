@@ -411,6 +411,7 @@ Transform:
   - {fileID: 2882676714246831423}
   - {fileID: 2882676714543807614}
   - {fileID: 2882676713530400619}
+  - {fileID: 5508090284104835754}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -445,7 +446,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  cameraPivot: {fileID: 0}
+  trickParticles: {fileID: 5508090284104835757}
   speed: 10
 --- !u!65 &2882676714119102756
 BoxCollider:
@@ -503,9 +504,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91e8b9d45dec45749aab894ed104f0b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 483f14b7df757d04390d23fa0a5ca0f5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.712
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -897,6 +898,73 @@ Transform:
   m_Father: {fileID: 2882676714543807614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2148074582417928898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2882676714119102761}
+    m_Modifications:
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890660610593099885, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+      propertyPath: m_Name
+      value: Trick Sparks
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+--- !u!4 &5508090284104835754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5890660610593099880, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+  m_PrefabInstance: {fileID: 2148074582417928898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5508090284104835757 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5890660610593099887, guid: cedf15c7785920d448648e086b0043e5, type: 3}
+  m_PrefabInstance: {fileID: 2148074582417928898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8059642962116243464
 PrefabInstance:
   m_ObjectHideFlags: 0
