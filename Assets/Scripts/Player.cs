@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 	bool spunRecently = false;
 	bool spinWaitForNotGrounded = false;
 	bool jumpedRecently = false;
+	bool jumpWaitForNotGrounded = false;
 
 	[SerializeField]
 	bool trackGlitches = true;
@@ -89,10 +90,11 @@ public class Player : MonoBehaviour
 				jumpedRecently = true;
 				Invoke(nameof(UnsetJumpedRecently), 0.5f);
 				jumpedOnThisFrame = true;
+				jumpWaitForNotGrounded = true;
 				// *** GLITCH DETECTION: MEGA JUMP ***
 				if (trackGlitches && spinning&&rigidbody.velocity.y>=0)
 				{
-					GlitchProgress.Singleton.CompleteGlitch("megajump");
+					// GlitchProgress.Singleton.CompleteGlitch("megajump");
 					spunRecently = true;
 				}
 			}
@@ -108,6 +110,7 @@ public class Player : MonoBehaviour
 			if(spinWaitForNotGrounded) {
 				spinWaitForNotGrounded = false;
 			}
+			jumpWaitForNotGrounded = false;
 		}
 
 		// Shorter jump if it isn't held down as long
@@ -123,10 +126,6 @@ public class Player : MonoBehaviour
 			if(trackGlitches && spinning)
 			{
 				GlitchProgress.Singleton.CompleteGlitch("double_spin");
-			}
-			if (trackGlitches && jumpedOnThisFrame)
-			{
-				GlitchProgress.Singleton.CompleteGlitch("megajump");
 			}
 			spinSound.Play();
 			animator.Play("Spin");
@@ -157,10 +156,10 @@ public class Player : MonoBehaviour
 		
 
 		// // *** GLITCH DETECTION: MEGA JUMP ***
-		// if (trackGlitches && jumpHeight >= 18f)
-		// {
-		// 	GlitchProgress.Singleton.CompleteGlitch("megajump");
-		// }
+		if (trackGlitches && rigidbody.velocity.y>=30f&&spinning)
+		{
+			GlitchProgress.Singleton.CompleteGlitch("megajump");
+		}
 
 		// *** GLITCH DETECTION: DOUBLE MEGA JUMP 20 DELUXE ***
 		if (trackGlitches && jumpHeight >= 20f)

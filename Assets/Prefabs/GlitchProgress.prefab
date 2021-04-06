@@ -43,14 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690486cf684b61341b12b5619fe05a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awlaysRepeat: 1
+  awlaysRepeat: 0
   glitchListPrefab: {fileID: 3096595897572968287, guid: 870071f297ba0a544a5b96e8570b56ef, type: 3}
   startingGlitches:
-  - identifier: slope_jump
-    text: Do a slope jump
-    description: 
-    prerequisites: []
-    requiresAllPrerequisites: 0
   - identifier: double_spin
     text: Do a double spin jump
     description: 
@@ -103,8 +98,8 @@ MonoBehaviour:
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: jump_5
-    text: jump over 5m without spinning
-    description: 
+    text: Jump over 5m without spinning
+    description: Get a higher jump without spinning by jumping off of a slope
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: spin_8

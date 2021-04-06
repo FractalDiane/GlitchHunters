@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 299272203}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: CameraCollisionIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,11 +1466,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aee6e0e3dc295d24db2c36bb39b4f28a, type: 3}
---- !u!4 &427127470 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2882676714246831423, guid: 2de1eb219f2fd544a99974ca04bfa7fd, type: 3}
-  m_PrefabInstance: {fileID: 1909969585}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &428011619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6086765350879459201, guid: aee6e0e3dc295d24db2c36bb39b4f28a, type: 3}
@@ -2298,146 +2293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: awlaysRepeat
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[0].text
-      value: Do a double spin jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[1].text
-      value: Do a Mega Spin Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[2].text
-      value: This is unlocked now
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[3].text
-      value: Clip through the ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[4].text
-      value: Defy Gravity
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[5].text
-      value: Get on top of the sloped tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[6].text
-      value: Get stuck in a tube
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[7].text
-      value: Clip your head through a door
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[8].text
-      value: Clip your head through an air conditioner
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[9].text
-      value: Do a 20m high jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[10].text
-      value: Jump over 5m without spinning
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[11].text
-      value: Jump 7m in 0.5 A presses
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[12].text
-      value: 'Find the hideout in the sky '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[0].identifier
-      value: double_spin
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[1].identifier
-      value: megajump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[2].identifier
-      value: locked
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[3].identifier
-      value: ground_clip
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[4].identifier
-      value: fly_away
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[5].identifier
-      value: tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[6].identifier
-      value: stuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[7].identifier
-      value: door_clip
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[8].identifier
-      value: air_clip
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[9].identifier
-      value: jump_20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[10].identifier
-      value: jump_5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[11].identifier
-      value: spin_8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[12].identifier
-      value: sky_hideout
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[1].description
-      value: Jump with good timing after a spin trick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[2].description
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[10].description
-      value: Get a higher jump without spinning by jumping off of a slope
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[11].description
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[2].prerequisites.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[3].prerequisites.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
-      propertyPath: startingGlitches.Array.data[2].prerequisites.Array.data[0]
-      value: test_1
-      objectReference: {fileID: 0}
     - target: {fileID: 3246697360190186040, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -5788,101 +5643,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de1eb219f2fd544a99974ca04bfa7fd, type: 3}
---- !u!1 &1913241674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1913241675}
-  - component: {fileID: 1913241678}
-  - component: {fileID: 1913241677}
-  - component: {fileID: 1913241676}
-  m_Layer: 20
-  m_Name: Quad
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1913241675
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913241674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.319, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_Children: []
-  m_Father: {fileID: 427127470}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1913241676
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913241674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.03451858}
-  m_Center: {x: 0, y: 0, z: 0.0008668547}
---- !u!23 &1913241677
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913241674}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1913241678
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913241674}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1930171385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6656,15 +6416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.089349024
+      value: 0.08934903
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000042843897
+      value: -0.0000000042843915
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.8434322e-10
+      value: 3.8434345e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6676,11 +6436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017710903
+      value: 0.000000017710896
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.419624e-10
+      value: -9.419621e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633966879616, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_Follow
