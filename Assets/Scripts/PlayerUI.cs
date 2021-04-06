@@ -22,6 +22,8 @@ public class PlayerUI : MonoBehaviour
 	GameObject player = null;
 	Player playerScript = null;
 
+	bool partialAnimation = false;
+
 	[SerializeField]
 	TextMeshProUGUI completedGlitchText = null;
 
@@ -42,14 +44,23 @@ public class PlayerUI : MonoBehaviour
 
 	public void PlayGlitchCompletedAnimation(string glitchText, bool newAvailable)
 	{
+		partialAnimation = false;
 		completedGlitchText.text = glitchText;
 		GetComponent<AudioSource>().Play();
 		GetComponent<Animator>().Play(newAvailable ? "GlitchFoundNewAvailable" : "GlitchFound");
 		Invoke(nameof(FinishGlitchCompletedAnimation), 4f);
 	}
 
+	public void PlayGlitchUnlockedAnimation()
+	{
+		partialAnimation = true;
+		GetComponent<AudioSource>().Play();
+		GetComponent<Animator>().Play("GlitchUnlocked");
+		Invoke(nameof(FinishGlitchCompletedAnimation), 4f);
+	}
+
 	void FinishGlitchCompletedAnimation()
 	{
-		GetComponent<Animator>().Play("GlitchFoundDisappear");
+		GetComponent<Animator>().Play(partialAnimation ? "GlitchFoundDisappear2" : "GlitchFoundDisappear");
 	}
 }
