@@ -1912,6 +1912,14 @@ PrefabInstance:
       value: door_clip
       objectReference: {fileID: 0}
     - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
+      propertyPath: startingGlitches.Array.data[0].description
+      value: Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
+      propertyPath: startingGlitches.Array.data[1].description
+      value: Test 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453873094472146396, guid: 3f110ff850b4b2f44b3e690cda9b5606, type: 3}
       propertyPath: startingGlitches.Array.data[4].prerequisites.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -5101,15 +5109,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08934903
+      value: 0.089349024
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042843915
+      value: 0.0000000042843897
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.8434345e-10
+      value: -3.8434322e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
