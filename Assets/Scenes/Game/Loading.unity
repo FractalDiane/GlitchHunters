@@ -591,7 +591,7 @@ Transform:
   m_GameObject: {fileID: 939899953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.492325, y: 2.1312, z: 39.1919}
+  m_LocalScale: {x: 36.80072, y: 2.1312, z: 39.1919}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1412,6 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645878064}
   - component: {fileID: 1645878065}
+  - component: {fileID: 1645878067}
   - component: {fileID: 1645878066}
   m_Layer: 0
   m_Name: Script
@@ -1428,7 +1429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645878063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.114917, y: 3.3635888, z: 31.531157}
+  m_LocalPosition: {x: -0.63, y: 3.3635888, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1449,6 +1450,7 @@ MonoBehaviour:
   loadingWheelTransform: {fileID: 2042310968}
   canvas: {fileID: 2138887001}
   blockToHide: {fileID: 1008527400}
+  sceneTransition: {fileID: 0}
 --- !u!82 &1645878066
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1545,6 +1547,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1645878067
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645878063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.14, y: 9.61, z: 4.17}
+  m_Center: {x: 1, y: 0, z: 16.75}
 --- !u!1 &1728656479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,11 +1841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042878727
+      value: 0.0000000042878727
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.4332479e-10
+      value: -3.4332479e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633966879616, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_Follow
