@@ -30,6 +30,9 @@ public class PlayerUI : MonoBehaviour
 	[SerializeField]
 	TextMeshProUGUI jumpHeightText = null;
 
+	[SerializeField]
+	GameObject dialogueAsyncPrefab = null;
+
 	//[SerializeField]
 	//GameObject glitchListPrefab = null;
 
@@ -60,5 +63,11 @@ public class PlayerUI : MonoBehaviour
 	void FinishGlitchCompletedAnimation()
 	{
 		GetComponent<Animator>().Play(partialAnimation ? "GlitchFoundDisappear2" : newAvailableAnimation ? "GlitchFoundDisappear" : "GlitchFoundDisappear3");
+	}
+
+	public void DialogueAsync(string name, string[] dialogue)
+	{
+		var dlg = Instantiate(dialogueAsyncPrefab, Vector3.zero, Quaternion.identity);
+		dlg.GetComponent<DialogueAsync>().StartDialogue(dialogue, name);
 	}
 }
