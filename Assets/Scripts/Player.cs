@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 	SpriteRenderer sprite;
 	new Rigidbody rigidbody;
 	AudioSource spinSound;
+	AudioSource jumpSound;
+	AudioSource landSound;
 	Animator animator;
 
 	const float JumpForce = 20.0f;
@@ -50,8 +52,11 @@ public class Player : MonoBehaviour
 	{
 		rigidbody = GetComponent<Rigidbody>();
 		sprite = GetComponentInChildren<SpriteRenderer>();
-		spinSound = GetComponent<AudioSource>();
 		animator = GetComponent<Animator>();
+		AudioSource[] sources = GetComponents<AudioSource>();
+		spinSound = sources[0];
+		jumpSound = sources[1];
+		landSound = sources[2];
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
@@ -72,8 +77,13 @@ public class Player : MonoBehaviour
 		}
 
 		RaycastHit hit;
-		onGround = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
-		bool jumpedOnThisFrame = false;
+		bool landed = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
+		if (!onGround && landed)
+		{
+			landSound.Play();
+		}
+		onGround = landed;
+		//bool jumpedOnThisFrame = false;
 		if (onGround)
 		{
 			canSpin = true;
@@ -86,10 +96,11 @@ public class Player : MonoBehaviour
 
 			if (!lockMovement && Input.GetButtonDown("Jump"))
 			{
+				jumpSound.Play();
 				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
 				jumpedRecently = true;
 				Invoke(nameof(UnsetJumpedRecently), 0.5f);
-				jumpedOnThisFrame = true;
+				//jumpedOnThisFrame = true;
 				jumpWaitForNotGrounded = true;
 				// *** GLITCH DETECTION: MEGA JUMP ***
 				if (trackGlitches && spinning&&rigidbody.velocity.y>=0)
