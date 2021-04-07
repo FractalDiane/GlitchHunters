@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
 	int flooredVisibleCharacters = 0;
 
 	bool rollText = false;
+	bool ended = false;
 
 	NPC host = null;
 	public NPC Host { set => host = value; }
@@ -60,7 +61,7 @@ public class Dialogue : MonoBehaviour
 				//Controller.Singleton.PlaySoundOneShot(textSounds[Random.Range(0, textSounds.Length)], soundPitch + Random.Range(-pitchVariance, pitchVariance), 0.05f);
 			//}
 
-			if (Input.GetButtonDown("Interact"))
+			if (!ended && Input.GetButtonDown("Interact"))
 			{
 				if (visibleCharacters < dialogueText[dialoguePage].Length)
 				{
@@ -82,6 +83,7 @@ public class Dialogue : MonoBehaviour
 					{
 						soundClose.Play();
 						GetComponent<Animator>().Play("Disappear");
+						ended = true;
 						Invoke(nameof(DestroySelf), 0.48f);
 					}
 				}

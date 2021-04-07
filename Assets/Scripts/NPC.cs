@@ -93,7 +93,10 @@ public class NPC : MonoBehaviour
 			glitchUnlocked = true;
 		}
 
-		indicatorSprite.enabled = true;
+		if (playerInArea)
+		{
+			indicatorSprite.enabled = true;
+		}
 	}
 
 	void OnTriggerEnter(Collider collider)
