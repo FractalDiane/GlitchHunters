@@ -53,11 +53,11 @@ public class GlitchList : MonoBehaviour
 			if (pair.Value.available)
 			{
 				listText.text += $"• {(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.longText}{(pair.Value.completed ? "</s></color>" : "")}\n";
-				listText.text += $"\t{(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.description}{(pair.Value.completed ? "</s></color>" : "")}\n";
+				//listText.text += $"\t{(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.description}{(pair.Value.completed ? "</s></color>" : "")}\n";
 			}
 			else
 			{
-				listText.text += "<color=grey>[???]</color>\n";
+				listText.text += "    <color=grey>[???]</color>\n";
 			}
 		}
 
