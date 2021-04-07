@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-	[SerializeField]
-	string npcName;
+	[System.Serializable]
+	class DialoguePage
+	{
+		public string speakerName;
+		public string dialogueText;
+	}
 
 	[System.Serializable]
 	class DialogueSet
 	{
-		public string[] dialogueText; 
+		public DialoguePage[] dialogue;
 	}
 
 	[SerializeField]
@@ -54,7 +58,17 @@ public class NPC : MonoBehaviour
 			indicatorSprite.enabled = false;
 			playerRef.LockMovement = true;
 			var dlg = Instantiate(dialogueObject, Vector3.zero, Quaternion.identity);
-			dlg.GetComponent<Dialogue>().StartDialogue(dialogueSets[currentDialogueSet].dialogueText, npcName, this);
+			
+			int count = dialogueSets[currentDialogueSet].dialogue.Length;
+			string[] speakers = new string[count];
+			string[] texts = new string[count];
+			for (int i = 0; i < count; i++)
+			{
+				speakers[i] = dialogueSets[currentDialogueSet].dialogue[i].speakerName;
+				texts[i] = dialogueSets[currentDialogueSet].dialogue[i].dialogueText;
+			}
+
+			dlg.GetComponent<Dialogue>().StartDialogue(texts, speakers, this);
 		}
 	}
 

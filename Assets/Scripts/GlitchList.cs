@@ -71,7 +71,7 @@ public class GlitchList : MonoBehaviour
 			}
 			else
 			{
-				listText.text += "<color=grey>[???]</color>\n";
+				listText.text += "    <color=grey>[???]</color>\n";
 			}
 		}
 	}
