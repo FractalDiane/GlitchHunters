@@ -3998,6 +3998,284 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032097273, y: 0.019357499, z: 0.022390693}
   m_Center: {x: -0.007321498, y: -0.0010840071, z: 0.0036868567}
+--- !u!1001 &1116007649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2545251695680300562, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_Name
+      value: NPCTowerHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[3].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[4].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[5].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[6].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[7].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[8].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[9].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[0].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[1].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[2].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[3].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[4].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[5].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[6].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[7].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[8].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[9].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].dialogueText
+      value: I hear the devs hid some kind of cool hangout spot <i>above</i> the
+        city.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[10].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[11].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].dialogueText
+      value: Don't have a clue how you'd get up there, though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].dialogueText
+      value: Maybe you could do some kind of trick jump off this tower... Nah, the
+        devs wouldn't let <i>that</i> happen, would they?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[3].dialogueText
+      value: Prove it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[4].dialogueText
+      value: Psh. Figure it out yourself, Mux.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[5].dialogueText
+      value: Sounds like you don't actually know how to reproduce it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[6].dialogueText
+      value: As if! Of course I do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[7].dialogueText
+      value: Jump immediately after doing a trick and you'll go way higher. I call
+        it the Alu-oop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[8].dialogueText
+      value: Thanks for the tip, Alu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[9].dialogueText
+      value: Urk! You tricked me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[0].dialogueText
+      value: Smell you later, Mux!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[10].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[11].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[1].dialogueText
+      value: We've got to move fast if we want to find the bugs before anyone else!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[2].dialogueText
+      value: I've already found a bunch of fun movement glitches, like the one where
+        you can jump super high.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[3].dialogueText
+      value: Prove it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[4].dialogueText
+      value: Psh. Figure it out yourself, Mux.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[5].dialogueText
+      value: Sounds like you don't actually know how to reproduce it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[6].dialogueText
+      value: As if! Of course I do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[7].dialogueText
+      value: Jump immediately after doing a trick and you'll go way higher. I call
+        it the Alu-oop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[8].dialogueText
+      value: Thanks for the tip, Alu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[9].dialogueText
+      value: Urk! You tricked me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[10].dialogueText
+      value: Also, we can't name a glitch after you. Why don't we  just call it a
+        Super Jump?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[11].dialogueText
+      value: "Whatever! That\u2019s all you\u2019re getting from me. Smell you later,
+        Mux! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[10].dialogueText
+      value: Also, we can't name a glitch after you. Why don't we  just call it a
+        Super Jump?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[11].dialogueText
+      value: "Whatever! That\u2019s all you\u2019re getting from me. Smell you later,
+        Mux! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251696511846069, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14bb163d24e6fe345927195dfb2907af, type: 3}
+    - target: {fileID: 2545251696511846069, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
 --- !u!1 &1182169922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2181743766629440291, guid: 5b06ea15d88f61148a1035280d23417d, type: 3}
@@ -4572,6 +4850,283 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374397125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1381451437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2545251695680300562, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_Name
+      value: NPCTubular
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.492
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
+      value: Hip Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[3].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[4].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[5].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[6].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[7].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[8].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[9].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[0].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[1].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[2].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[3].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[4].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[5].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[6].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[7].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[8].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[9].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].dialogueText
+      value: Tubular!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[10].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[11].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].dialogueText
+      value: We've got to move fast if we want to find the bugs before anyone else!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].dialogueText
+      value: I've already found a bunch of fun movement glitches, like the one where
+        you can jump super high.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[3].dialogueText
+      value: Prove it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[4].dialogueText
+      value: Psh. Figure it out yourself, Mux.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[5].dialogueText
+      value: Sounds like you don't actually know how to reproduce it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[6].dialogueText
+      value: As if! Of course I do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[7].dialogueText
+      value: Jump immediately after doing a trick and you'll go way higher. I call
+        it the Alu-oop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[8].dialogueText
+      value: Thanks for the tip, Alu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[9].dialogueText
+      value: Urk! You tricked me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[0].dialogueText
+      value: Smell you later, Mux!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[10].speakerName
+      value: Mux
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[11].speakerName
+      value: Alu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[1].dialogueText
+      value: We've got to move fast if we want to find the bugs before anyone else!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[2].dialogueText
+      value: I've already found a bunch of fun movement glitches, like the one where
+        you can jump super high.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[3].dialogueText
+      value: Prove it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[4].dialogueText
+      value: Psh. Figure it out yourself, Mux.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[5].dialogueText
+      value: Sounds like you don't actually know how to reproduce it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[6].dialogueText
+      value: As if! Of course I do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[7].dialogueText
+      value: Jump immediately after doing a trick and you'll go way higher. I call
+        it the Alu-oop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[8].dialogueText
+      value: Thanks for the tip, Alu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[9].dialogueText
+      value: Urk! You tricked me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[10].dialogueText
+      value: Also, we can't name a glitch after you. Why don't we  just call it a
+        Super Jump?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[11].dialogueText
+      value: "Whatever! That\u2019s all you\u2019re getting from me. Smell you later,
+        Mux! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[10].dialogueText
+      value: Also, we can't name a glitch after you. Why don't we  just call it a
+        Super Jump?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[11].dialogueText
+      value: "Whatever! That\u2019s all you\u2019re getting from me. Smell you later,
+        Mux! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545251696511846069, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14bb163d24e6fe345927195dfb2907af, type: 3}
+    - target: {fileID: 2545251696511846069, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
 --- !u!1 &1388196920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7358623811782629538, guid: 39847286ea18dbc4ab19e753328310bd, type: 3}
@@ -5786,7 +6341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.418
+      value: -7.44
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7265,11 +7820,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000177109
+      value: -0.0000000177109
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -9.419622e-10
+      value: 9.419622e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633966879616, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_Follow

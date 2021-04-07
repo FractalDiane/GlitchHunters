@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 2882676713245911917}
   - component: {fileID: 2882676713245911891}
   m_Layer: 3
-  m_Name: test218x338
+  m_Name: ActualSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2882676713245911918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03999996, y: 0.82899994, z: 0}
+  m_LocalPosition: {x: -0.038, y: 0.723, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2882676713153031837}
@@ -154,7 +154,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1affe7308f82a7742882fdf9acc91346, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5687070eb71917247ba5a6f463d51668, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

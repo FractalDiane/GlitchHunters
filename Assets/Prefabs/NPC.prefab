@@ -61,6 +61,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSets: []
   glitchToUnlock: 
+  OnDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
   dialogueObject: {fileID: 6695594706097111573, guid: 8be4c0ce479f8e547a7cfe4b44b4e380, type: 3}
   interactSprite: {fileID: 9062967781166119167, guid: 0517ebbdbf41d8849995ca31a42b569c, type: 3}
   taskSprite: {fileID: 8969989425627485813, guid: 0517ebbdbf41d8849995ca31a42b569c, type: 3}
@@ -75,6 +78,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2545251696511846068}
   - component: {fileID: 2545251696511846069}
+  - component: {fileID: 2451263879785301326}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -147,6 +151,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2451263879785301326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545251696511846075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb708579db28bf4793720242c2c3a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
+  yModifier: 0.12
 --- !u!1 &4010161010819317542
 GameObject:
   m_ObjectHideFlags: 0
