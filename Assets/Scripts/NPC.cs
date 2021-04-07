@@ -68,7 +68,10 @@ public class NPC : MonoBehaviour
 	public void StartDialogue()
 	{
 		indicatorSprite.enabled = false;
-		playerRef.LockMovement = true;
+		if (playerRef != null) //this happened once. I think I like exited and entered the trigger at the same time
+		{
+			playerRef.LockMovement = true;
+		}
 		var dlg = Instantiate(dialogueObject, Vector3.zero, Quaternion.identity);
 		
 		int count = dialogueSets[currentDialogueSet].dialogue.Length;
@@ -115,7 +118,7 @@ public class NPC : MonoBehaviour
 		if (collider.gameObject.tag == "Player")
 		{
 			playerInArea = false;
-			playerRef = null;
+			// playerRef = null; exiting the trigger while in conversation will cause a softlock
 			if (!glitchUnlocked && glitchToUnlock.Length > 0)
 			{
 				indicatorSprite.sprite = taskSprite;

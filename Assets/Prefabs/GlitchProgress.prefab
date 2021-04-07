@@ -46,20 +46,67 @@ MonoBehaviour:
   awlaysRepeat: 0
   OnMenuOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnMenuClose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   glitchListPrefab: {fileID: 3096595897572968287, guid: 870071f297ba0a544a5b96e8570b56ef, type: 3}
   startingGlitches:
+  - identifier: tower
+    text: Get on top of the sloped tower
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
   - identifier: double_spin
     text: Do a double spin jump
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
+  - identifier: spin_8
+    text: Spin 7m high without jumping
+    description: Double spin in 0.5 A presses
+    prerequisites:
+    - double_spin
+    requiresAllPrerequisites: 0
   - identifier: megajump
     text: Do a Mega Spin Jump
-    description: Jump with good timing after a spin trick
+    description: Jump and Spin on the same frame
+    prerequisites:
+    - double_spin
+    requiresAllPrerequisites: 0
+  - identifier: jump_20
+    text: Do a 20m high jump
+    description: 
+    prerequisites:
+    - 
+    requiresAllPrerequisites: 0
+  - identifier: jump_5
+    text: Jump over 5m without spinning
+    description: Get a higher jump without spinning by jumping off of a slope
     prerequisites: []
     requiresAllPrerequisites: 0
   - identifier: ground_clip
@@ -69,11 +116,6 @@ MonoBehaviour:
     requiresAllPrerequisites: 0
   - identifier: fly_away
     text: Defy Gravity
-    description: 
-    prerequisites: []
-    requiresAllPrerequisites: 0
-  - identifier: tower
-    text: Get on top of the sloped tower
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
@@ -92,23 +134,24 @@ MonoBehaviour:
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
-  - identifier: jump_20
-    text: Do a 20m high jump
-    description: 
-    prerequisites: []
-    requiresAllPrerequisites: 0
-  - identifier: jump_5
-    text: Jump over 5m without spinning
-    description: Get a higher jump without spinning by jumping off of a slope
-    prerequisites: []
-    requiresAllPrerequisites: 0
-  - identifier: spin_8
-    text: Jump 7m in 0.5 A presses
-    description: 
-    prerequisites: []
-    requiresAllPrerequisites: 0
   - identifier: sky_hideout
     text: 'Find the hideout in the sky '
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
+  - identifier: out_of_frame
+    text: Lose track of your avatar
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: out_of_bounds
+    text: Out of bounds
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
+  - identifier: page_error
+    text: Page Error
+    description: Flip too many pages
+    prerequisites:
+    - 0
+    requiresAllPrerequisites: 1
