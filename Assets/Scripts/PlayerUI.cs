@@ -33,6 +33,15 @@ public class PlayerUI : MonoBehaviour
 	[SerializeField]
 	GameObject dialogueAsyncPrefab = null;
 
+	struct AnimInfo
+	{
+		public string text;
+		public bool newAvailable;
+		public AnimInfo(string text, bool newAvailable) { this.text = text; this.newAvailable = newAvailable; }
+	}
+
+	Queue<AnimInfo> completedGlitches = new Queue<AnimInfo>();
+
 	//[SerializeField]
 	//GameObject glitchListPrefab = null;
 
@@ -46,10 +55,22 @@ public class PlayerUI : MonoBehaviour
 	public void PlayGlitchCompletedAnimation(string glitchText, bool newAvailable)
 	{
 		partialAnimation = false;
-		newAvailableAnimation = newAvailable;
-		completedGlitchText.text = glitchText;
 		GetComponent<AudioSource>().Play();
-		GetComponent<Animator>().Play(newAvailable ? "GlitchFoundNewAvailable" : "GlitchFound");
+		bool queueWasEmpty = completedGlitches.Count == 0;
+		completedGlitches.Enqueue(new AnimInfo(glitchText, newAvailable));
+		if (queueWasEmpty)
+		{
+			PlayGlitchCompletedAnimationFromQueue();
+		}
+	}
+
+	void PlayGlitchCompletedAnimationFromQueue()
+	{
+		partialAnimation = false;
+		AnimInfo info = completedGlitches.Peek();
+		newAvailableAnimation = info.newAvailable;
+		completedGlitchText.text = info.text;
+		GetComponent<Animator>().Play(info.newAvailable ? "GlitchFoundNewAvailable" : "GlitchFound");
 		Invoke(nameof(FinishGlitchCompletedAnimation), 4f);
 	}
 
@@ -64,6 +85,11 @@ public class PlayerUI : MonoBehaviour
 	void FinishGlitchCompletedAnimation()
 	{
 		GetComponent<Animator>().Play(partialAnimation ? "GlitchFoundDisappear2" : newAvailableAnimation ? "GlitchFoundDisappear" : "GlitchFoundDisappear3");
+		completedGlitches.Dequeue();
+		if (completedGlitches.Count > 0)
+		{
+			Invoke(nameof(PlayGlitchCompletedAnimationFromQueue), 1f);
+		}
 	}
 
 	public void DialogueAsync(string name, string[] dialogue)
