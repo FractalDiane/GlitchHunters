@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
 		}
 
 		RaycastHit hit;
-		bool landed = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask);
+		bool landed = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask,  QueryTriggerInteraction.Ignore);
 		if (!onGround && landed)
 		{
 			landSound.Play();
