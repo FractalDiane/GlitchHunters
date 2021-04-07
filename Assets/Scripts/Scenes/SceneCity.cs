@@ -9,7 +9,7 @@ public class SceneCity : MonoBehaviour
 
 	void Start()
 	{
-		aluNpc.PlayerRef = FindObjectOfType<Player>();
-		aluNpc.StartDialogue();
+		//aluNpc.PlayerRef = FindObjectOfType<Player>();
+		//aluNpc.StartDialogue();
 	}
 }

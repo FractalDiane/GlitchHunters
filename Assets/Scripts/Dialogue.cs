@@ -61,7 +61,7 @@ public class Dialogue : MonoBehaviour
 				//Controller.Singleton.PlaySoundOneShot(textSounds[Random.Range(0, textSounds.Length)], soundPitch + Random.Range(-pitchVariance, pitchVariance), 0.05f);
 			//}
 
-			if (!ended && Input.GetButtonDown("Interact"))
+			if (!ended && (Input.GetButtonDown("Interact") || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")))
 			{
 				if (visibleCharacters < dialogueText[dialoguePage].Length)
 				{
