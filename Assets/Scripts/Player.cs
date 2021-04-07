@@ -211,8 +211,13 @@ public class Player : MonoBehaviour
 		{
 			target.Normalize();
 		}
+		float actualSpeed = speed;
+		if (Input.GetButton("Fire2"))
+		{
+			actualSpeed *= 2f;
+		}
 
-		Vector3 result = target * speed;
+		Vector3 result = target * actualSpeed;
 		result.y = rigidbody.velocity.y;
 		rigidbody.velocity = result + AddedVelocity;
 	}

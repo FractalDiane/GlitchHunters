@@ -149,6 +149,11 @@ MonoBehaviour:
     description: 
     prerequisites: []
     requiresAllPrerequisites: 0
+  - identifier: car_stuck
+    text: Get stuck inside a car
+    description: 
+    prerequisites: []
+    requiresAllPrerequisites: 0
   - identifier: page_error
     text: Page Error
     description: Flip too many pages

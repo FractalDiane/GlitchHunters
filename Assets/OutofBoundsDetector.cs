@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OutofBoundsDetector : MonoBehaviour
 {
+    public bool shouldResetPosition = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,15 @@ public class OutofBoundsDetector : MonoBehaviour
         
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other)
+    {
         if(other.tag == "Player") 
         {
             GlitchProgress.Singleton.CompleteGlitch("out_of_bounds");
-            other.gameObject.transform.localPosition = Vector3.zero;    
-            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            if(shouldResetPosition) {
+                other.gameObject.transform.localPosition = Vector3.zero;    
+                other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
         }
     }
 
