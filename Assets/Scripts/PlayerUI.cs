@@ -29,9 +29,14 @@ public class PlayerUI : MonoBehaviour
 	TextMeshProUGUI completedGlitchText = null;
 	[SerializeField]
 	TextMeshProUGUI jumpHeightText = null;
+	[SerializeField]
+	TextMeshProUGUI jumpHeightText2 = null;
 
 	[SerializeField]
 	GameObject dialogueAsyncPrefab = null;
+
+	[SerializeField]
+	bool showJumpHeight = true;
 
 	struct AnimInfo
 	{
@@ -46,6 +51,12 @@ public class PlayerUI : MonoBehaviour
 	//GameObject glitchListPrefab = null;
 
 	// =========================================================================
+
+	void Start()
+	{
+		jumpHeightText.enabled = showJumpHeight;
+		jumpHeightText2.enabled = showJumpHeight;
+	}
 
 	public void DisplayJumpHeight(float height) {
 		jumpHeightText.text = Mathf.Floor(height) + "m";

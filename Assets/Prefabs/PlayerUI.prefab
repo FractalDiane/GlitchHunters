@@ -480,7 +480,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completedGlitchText: {fileID: 3941955395113800392}
   jumpHeightText: {fileID: 2093122300}
+  jumpHeightText2: {fileID: 1799621080}
   dialogueAsyncPrefab: {fileID: 6695594706097111573, guid: 5b79f7feb74a470468df70b939ca379a, type: 3}
+  showJumpHeight: 1
 --- !u!82 &3941955394582571788
 AudioSource:
   m_ObjectHideFlags: 0

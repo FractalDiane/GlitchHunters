@@ -47,7 +47,7 @@ public class SceneLoading : MonoBehaviour
 	{
 		if (loaded && collider.gameObject.tag == "Player")
 		{
-			SceneManager.LoadScene(2);
+			SceneManager.LoadScene(3);
 		}
 	}
 }
