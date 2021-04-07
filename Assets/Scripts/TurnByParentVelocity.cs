@@ -24,6 +24,9 @@ public class TurnByParentVelocity : MonoBehaviour
             lastDirection.z = rb.velocity.z;
         }
         lastDirection.y = rb.velocity.y*yModifier;
-        transform.rotation = Quaternion.LookRotation(lastDirection);
+		if (lastDirection != Vector3.zero)
+		{
+			transform.rotation = Quaternion.LookRotation(lastDirection);
+		}
     }
 }

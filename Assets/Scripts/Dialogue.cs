@@ -97,6 +97,7 @@ public class Dialogue : MonoBehaviour
 		var txt = GetComponentInChildren<TextMeshProUGUI>();
 		txt.maxVisibleCharacters = 0;
 		dialogueText = text;
+		dialogueNames = speakerNames;
 		txt.text = dialogueText[0];
 		GetComponent<Animator>().Play("Appear");
 		Invoke(nameof(RollText), 0.5f);

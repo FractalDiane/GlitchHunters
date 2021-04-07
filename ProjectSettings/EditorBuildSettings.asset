@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Loading.unity
     guid: d3393d968fd863f499f74c5232c49823
   - enabled: 1
-    path: Assets/Scenes/BriansTestLevelDesign/BriansTestLevelDesign 1.unity
-    guid: fa0caaf169e923e4896e772ef9c85d09
+    path: Assets/Scenes/Game/City.unity
+    guid: b22b65c528cf0b74ea98a5dfaf709472
   m_configObjects: {}

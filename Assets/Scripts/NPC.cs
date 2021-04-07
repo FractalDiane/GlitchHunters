@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NPC : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class NPC : MonoBehaviour
 	[SerializeField]
 	string glitchToUnlock = string.Empty;
 	bool glitchUnlocked = false;
+
+	[SerializeField]
+	UnityEvent OnDialogueFinished;
+
 	[Space(20)]
 	[SerializeField]
 	GameObject dialogueObject = null;
@@ -31,6 +36,7 @@ public class NPC : MonoBehaviour
 
 	bool playerInArea = false;
 	Player playerRef = null;
+	public Player PlayerRef { set => playerRef = value; }
 	
 	[SerializeField]
 	Sprite interactSprite;
@@ -55,21 +61,26 @@ public class NPC : MonoBehaviour
 	{
 		if (playerInArea && !playerRef.LockMovement && Input.GetButtonDown("Interact"))
 		{
-			indicatorSprite.enabled = false;
-			playerRef.LockMovement = true;
-			var dlg = Instantiate(dialogueObject, Vector3.zero, Quaternion.identity);
-			
-			int count = dialogueSets[currentDialogueSet].dialogue.Length;
-			string[] speakers = new string[count];
-			string[] texts = new string[count];
-			for (int i = 0; i < count; i++)
-			{
-				speakers[i] = dialogueSets[currentDialogueSet].dialogue[i].speakerName;
-				texts[i] = dialogueSets[currentDialogueSet].dialogue[i].dialogueText;
-			}
-
-			dlg.GetComponent<Dialogue>().StartDialogue(texts, speakers, this);
+			StartDialogue();
 		}
+	}
+
+	public void StartDialogue()
+	{
+		indicatorSprite.enabled = false;
+		playerRef.LockMovement = true;
+		var dlg = Instantiate(dialogueObject, Vector3.zero, Quaternion.identity);
+		
+		int count = dialogueSets[currentDialogueSet].dialogue.Length;
+		string[] speakers = new string[count];
+		string[] texts = new string[count];
+		for (int i = 0; i < count; i++)
+		{
+			speakers[i] = dialogueSets[currentDialogueSet].dialogue[i].speakerName;
+			texts[i] = dialogueSets[currentDialogueSet].dialogue[i].dialogueText;
+		}
+
+		dlg.GetComponent<Dialogue>().StartDialogue(texts, speakers, this);
 	}
 
 	public void EndDialogue()
