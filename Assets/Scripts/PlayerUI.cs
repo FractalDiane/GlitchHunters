@@ -56,6 +56,16 @@ public class PlayerUI : MonoBehaviour
 	{
 		jumpHeightText.enabled = showJumpHeight;
 		jumpHeightText2.enabled = showJumpHeight;
+		playerScript = FindObjectOfType<Player>();
+		player = playerScript.gameObject;
+	}
+
+	void Update()
+	{
+		if (Input.GetButtonDown("Reset"))
+		{
+			ResetPlayer();
+		}
 	}
 
 	public void DisplayJumpHeight(float height) {
@@ -107,5 +117,10 @@ public class PlayerUI : MonoBehaviour
 	{
 		var dlg = Instantiate(dialogueAsyncPrefab, Vector3.zero, Quaternion.identity);
 		dlg.GetComponent<DialogueAsync>().StartDialogue(dialogue, name);
+	}
+
+	public void ResetPlayer()
+	{
+		player.transform.position = new Vector3(0, 3, 0);
 	}
 }
