@@ -59,7 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd72a08478f4b46438e0a3eeffbf93f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: 
   dialogueSets: []
   glitchToUnlock: 
   dialogueObject: {fileID: 6695594706097111573, guid: 8be4c0ce479f8e547a7cfe4b44b4e380, type: 3}

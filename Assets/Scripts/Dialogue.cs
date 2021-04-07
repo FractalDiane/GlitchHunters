@@ -7,6 +7,7 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {	
 	string[] dialogueText;
+	string[] dialogueNames;
 
 	int dialoguePage = 0;
 	float visibleCharacters = 0;
@@ -73,6 +74,7 @@ public class Dialogue : MonoBehaviour
 						text.maxVisibleCharacters = 0;
 						dialoguePage++;
 						text.text = dialogueText[dialoguePage];
+						name.text = dialogueNames[dialoguePage];
 						rollText = false;
 						Invoke(nameof(RollText), 0.05f);
 					}
@@ -87,11 +89,11 @@ public class Dialogue : MonoBehaviour
 		}
 	}
 
-	public void StartDialogue(string[] text, string npcName, NPC newHost)
+	public void StartDialogue(string[] text, string[] speakerNames, NPC newHost)
 	{
 		GetComponent<AudioSource>().Play();
 		host = newHost;
-		nameObject.GetComponent<TextMeshProUGUI>().text = npcName;
+		nameObject.GetComponent<TextMeshProUGUI>().text = speakerNames[0];
 		var txt = GetComponentInChildren<TextMeshProUGUI>();
 		txt.maxVisibleCharacters = 0;
 		dialogueText = text;
