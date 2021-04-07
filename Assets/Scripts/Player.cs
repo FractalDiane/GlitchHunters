@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
 	AudioSource spinSound;
 	AudioSource jumpSound;
 	AudioSource landSound;
+	AudioSource skateSound;
 	Animator animator;
 
 	const float JumpForce = 20.0f;
+
+	bool playingSkateSound = false;
 
 	float horizontal = 0f;
 	float vertical = 0f;
@@ -57,6 +60,7 @@ public class Player : MonoBehaviour
 		spinSound = sources[0];
 		jumpSound = sources[1];
 		landSound = sources[2];
+		skateSound = sources[3];
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
@@ -150,6 +154,20 @@ public class Player : MonoBehaviour
 			spunRecently = true;
 			spinWaitForNotGrounded = true;
 			//Invoke(nameof(UnsetSpunRecently), 0.5f);
+		}
+
+		if (onGround && (horizontal != 0f || vertical != 0f))
+		{
+			if (!playingSkateSound)
+			{
+				skateSound.Play();
+				playingSkateSound = true;
+			}
+		}
+		else
+		{
+			skateSound.Stop();
+			playingSkateSound = false;
 		}
 
 		Quaternion currentRot = sprite.transform.rotation;
