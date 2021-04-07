@@ -1,12 +1,15 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GlitchProgress : MonoBehaviour
 {
 	static GlitchProgress singleton = null;
 	public static GlitchProgress Singleton { get => singleton; }
 	public bool awlaysRepeat = false;
+	public UnityEvent OnMenuOpen;
+	public UnityEvent OnMenuClose;
 	void Awake()
 	{
 		if (singleton == null)
@@ -24,6 +27,8 @@ public class GlitchProgress : MonoBehaviour
 
 	[SerializeField]
 	GameObject glitchListPrefab = null;
+
+	GlitchList glitchListUI = null;
 
 	// =========================================================================
 
@@ -84,10 +89,12 @@ public class GlitchProgress : MonoBehaviour
 		if (!playerScript.LockMovement && Input.GetButtonDown("Pause") && !menuOpen)
 		{
 			playerScript.LockMovement = true;
+			playerScript.AddedVelocity = Vector3.zero;
 			var menu = Instantiate(glitchListPrefab, Vector3.zero, Quaternion.identity);
-			GlitchList script = menu.GetComponent<GlitchList>();
-			script.MenuClosed.AddListener(MenuClosed);
-			script.ShowList(glitches);
+			glitchListUI = menu.GetComponent<GlitchList>();
+			glitchListUI.MenuClosed.AddListener(MenuClosed);
+			glitchListUI.ShowList(glitches);
+			OnMenuOpen.Invoke();
 		}
 	}
 
@@ -119,6 +126,10 @@ public class GlitchProgress : MonoBehaviour
 			}
 
 			PlayerUI.Singleton.PlayGlitchCompletedAnimation(glitches[identifier].longText, anyUnlocked);
+			
+			if(glitchListUI != null) {
+				glitchListUI.Refresh(glitches);
+			}
 		}
 	}
 
@@ -133,11 +144,15 @@ public class GlitchProgress : MonoBehaviour
 		{
 			PlayerUI.Singleton.PlayGlitchUnlockedAnimation();
 		}
+		if(glitchListUI != null) {
+			glitchListUI.Refresh(glitches);
+		}
 	}
 
 	
 	void MenuClosed()
 	{
 		playerScript.LockMovement = false;
+		OnMenuClose.Invoke();
 	}
 }

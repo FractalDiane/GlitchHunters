@@ -25,12 +25,12 @@ public class MovingPlatform : MonoBehaviour
 	void OnCollisionEnter(Collision collision)
 	{
 		player = collision.gameObject.GetComponent<Player>();
-		player.OnPlatform = true;
+		if(player)player.OnPlatform = true;
 	}
 
 	void OnCollisionExit(Collision collision)
 	{
-		player.OnPlatform = false;
+		if(player)player.OnPlatform = false;
 		player = null;
 	}
 

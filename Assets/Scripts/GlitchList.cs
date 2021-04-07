@@ -16,6 +16,7 @@ public class GlitchList : MonoBehaviour
 
 	[SerializeField]
 	TextMeshProUGUI listText;
+	Dictionary<string, GlitchProgress.Glitch> currentGlitches;
 
 	void Awake()
 	{
@@ -37,32 +38,42 @@ public class GlitchList : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Pause") && isMenuOpen)
 		{
-			soundClose.Play();
-			Cursor.lockState = CursorLockMode.Locked;
-			Cursor.visible = false;
-			GetComponent<Animator>().Play("Disappear");
-			Invoke(nameof(CloseMenu), 0.8f);
+			Close();
 		}
+	}
+
+	void Close() {
+		soundClose.Play();
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+		GetComponent<Animator>().Play("Disappear");
+		Invoke(nameof(CloseMenu), 0.8f);
 	}
 
 	public void ShowList(Dictionary<string, GlitchProgress.Glitch> glitches)
 	{
+		Refresh(glitches);
+
+		GetComponent<Animator>().Play("Appear");
+		isMenuOpen = true;
+	}
+	public void Refresh(Dictionary<string, GlitchProgress.Glitch> glitches) {
 		listText.text = string.Empty;
 		foreach (var pair in glitches)
 		{
-			if (pair.Value.available)
+			if (pair.Value.available||pair.Value.completed)
 			{
 				listText.text += $"• {(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.longText}{(pair.Value.completed ? "</s></color>" : "")}\n";
-				listText.text += $"\t{(pair.Value.completed ? "<color=grey><s>" : "")}{pair.Value.description}{(pair.Value.completed ? "</s></color>" : "")}\n";
+				if (pair.Value.description != "")
+				{
+					listText.text += $"<size=20>{(pair.Value.completed ? "<color=grey><s>" : "<color=#888>")}{pair.Value.description}{(pair.Value.completed ? "</s></color>" : "</color>")}</size>\n";
+				}
 			}
 			else
 			{
 				listText.text += "<color=grey>[???]</color>\n";
 			}
 		}
-
-		GetComponent<Animator>().Play("Appear");
-		isMenuOpen = true;
 	}
 
 	void CloseMenu()
@@ -74,10 +85,20 @@ public class GlitchList : MonoBehaviour
 	public void NextPage()
 	{
 		listText.pageToDisplay++;
+		if (listText.pageToDisplay > 10)
+		{
+			// GlitchProgress.Singleton.UnlockGlitch("page_error", true);
+			GlitchProgress.Singleton.CompleteGlitch("page_error");
+			listText.pageToDisplay = 1;
+			Close();
+		}
 	}
 
 	public void LastPage()
 	{
-		listText.pageToDisplay--;
+		if (listText.pageToDisplay>1)
+		{
+			listText.pageToDisplay--;
+		}
 	}
 }

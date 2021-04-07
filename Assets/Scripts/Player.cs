@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
 
 		RaycastHit hit;
 		bool landed = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out hit, 1.2f, collisionMask,  QueryTriggerInteraction.Ignore);
-		if (!onGround && landed)
+		if (!onGround && landed && rigidbody.velocity.y<-1f)
 		{
 			landSound.Play();
 		}
@@ -93,6 +93,8 @@ public class Player : MonoBehaviour
 			canSpin = true;
 			if(!spinWaitForNotGrounded)
 				spunRecently = false;
+			if(!jumpWaitForNotGrounded)
+				jumpedRecently = false;
 			if (!onPlatform)
 			{
 				addedVelocity = Vector3.zero;
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
 				jumpSound.Play();
 				rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
 				jumpedRecently = true;
-				Invoke(nameof(UnsetJumpedRecently), 0.5f);
+				// Invoke(nameof(UnsetJumpedRecently), 0.5f);
 				//jumpedOnThisFrame = true;
 				jumpWaitForNotGrounded = true;
 				// *** GLITCH DETECTION: MEGA JUMP ***
@@ -182,6 +184,10 @@ public class Player : MonoBehaviour
 			GlitchProgress.Singleton.CompleteGlitch("jump_5");
 		}
 
+		if (trackGlitches && jumpHeight >= 7f && !jumpedRecently)
+		{
+			GlitchProgress.Singleton.CompleteGlitch("spin_8");
+		}
 		
 
 		// // *** GLITCH DETECTION: MEGA JUMP ***
@@ -219,4 +225,5 @@ public class Player : MonoBehaviour
 	bool IsSpinning() {
 		return animator.GetCurrentAnimatorStateInfo(0).IsName("Spin");
 	}
+	
 }
