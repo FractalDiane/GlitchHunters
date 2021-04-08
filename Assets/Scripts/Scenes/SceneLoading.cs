@@ -29,7 +29,7 @@ public class SceneLoading : MonoBehaviour
 
 	void ShowDialogue()
 	{
-		string[] dlg = new string[] {"Oh, hey. Welcome back, Mux.", "These loading times take a while sometimes, yeah?", "Maybe you could practice your skills in the meantime?"};
+		string[] dlg = new string[] {"Oh, hey. Welcome back, Mux.", "These loading times take a while sometimes, yeah?", "Once you get into the level, remember to press Q or Escape to open your glitch list.", "We've got a lot to find today."};
 		PlayerUI.Singleton.DialogueAsync("Cheesegrater", dlg);
 	}
 

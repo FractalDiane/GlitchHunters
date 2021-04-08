@@ -56,31 +56,6 @@ public class DialogueAsync : MonoBehaviour
 				//Controller.Singleton.PlaySoundOneShot(textSounds[Random.Range(0, textSounds.Length)], soundPitch + Random.Range(-pitchVariance, pitchVariance), 0.05f);
 			//}
 
-			/*if (Input.GetButtonDown("Interact"))
-			{
-				if (visibleCharacters < dialogueText[dialoguePage].Length)
-				{
-					visibleCharacters = dialogueText[dialoguePage].Length;
-				}
-				else
-				{
-					if (dialoguePage >= dialogueText.Length - 1)
-					{
-						visibleCharacters = 0;
-						text.maxVisibleCharacters = 0;
-						dialoguePage++;
-						text.text = dialogueText[dialoguePage];
-						rollText = false;
-						Invoke(nameof(RollText), 0.05f);
-					}
-					else
-					{
-						soundClose.Play();
-						//GetComponent<Animator>().Play("Disappear");
-						Invoke(nameof(DestroySelf), 0.48f);
-					}
-				}
-			}*/
 			if (!pageEnded && visibleCharacters >= dialogueText[dialoguePage].Length)
 			{
 				rollText = false;
