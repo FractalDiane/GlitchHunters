@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2545251695680300562, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_Name
-      value: DefaultNPC
+      value: DefaultNPC Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300588, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_RootOrder
@@ -265,14 +265,6 @@ PrefabInstance:
       propertyPath: dialogueSets.Array.data[1].dialogue.Array.data[11].dialogueText
       value: "Whatever! That\u2019s all you\u2019re getting from me. Smell you later,
         Mux! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 2545251696511846068, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2545251696511846068, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2545251696511846069, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_Sprite

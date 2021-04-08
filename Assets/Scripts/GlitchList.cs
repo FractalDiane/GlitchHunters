@@ -102,6 +102,11 @@ public class GlitchList : MonoBehaviour
 		}
 	}
 
+	public void ResetPlayerPosition() {
+		GlitchProgress.Singleton.ResetPlayerPosition();
+		Close();
+	}
+
 	public void ExitGame()
 	{
 		#if UNITY_EDITOR

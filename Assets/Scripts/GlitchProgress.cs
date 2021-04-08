@@ -149,6 +149,13 @@ public class GlitchProgress : MonoBehaviour
 		}
 	}
 
+	public void ResetPlayerPosition() {
+		if (player != null)
+		{
+			player.transform.localPosition = Vector3.zero;
+		}
+	}
+
 	
 	void MenuClosed()
 	{
