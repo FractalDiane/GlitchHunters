@@ -30,6 +30,8 @@ public class GlitchProgress : MonoBehaviour
 
 	GlitchList glitchListUI = null;
 
+	int glitchesCompleted = 0;
+
 	// =========================================================================
 
 	[System.Serializable]
@@ -129,6 +131,12 @@ public class GlitchProgress : MonoBehaviour
 			
 			if(glitchListUI != null) {
 				glitchListUI.Refresh(glitches);
+			}
+
+			glitchesCompleted++;
+			if (glitchesCompleted >= glitches.Count)
+			{
+				PlayerUI.Singleton.PlayGlitchMasterAnimation();
 			}
 		}
 	}
