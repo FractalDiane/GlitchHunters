@@ -5225,11 +5225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
-      value: Spinner Kid
+      value: Pepoloni
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
-      value: Spinner Kid
+      value: Pepoloni
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
@@ -5909,15 +5909,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
-      value: Peploni
+      value: Muskrat
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
-      value: Peploni
+      value: Muskrat
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
-      value: Peploni
+      value: Muskrat
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[3].speakerName
@@ -6001,7 +6001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].dialogueText
-      value: You know the floors? They gave us floors but no ceilings.
+      value: They gave us floors but no ceilings.
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].dialogueText
@@ -11922,15 +11922,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08934903
+      value: 0.089349024
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042843897
+      value: 0.0000000042843915
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633068542349, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.8434325e-10
+      value: -3.843434e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11946,11 +11946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017710903
+      value: 0.000000017710896
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633397662353, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.419624e-10
+      value: -9.419621e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8099414633966879616, guid: a242b0bf29151d74786f1e2c79bffea9, type: 3}
       propertyPath: m_Follow
