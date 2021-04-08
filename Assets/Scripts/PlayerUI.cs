@@ -119,6 +119,18 @@ public class PlayerUI : MonoBehaviour
 		dlg.GetComponent<DialogueAsync>().StartDialogue(dialogue, name);
 	}
 
+	public void PlayGlitchMasterAnimation()
+	{
+		GetComponents<AudioSource>()[1].Play();
+		GetComponent<Animator>().Play("GlitchMaster");
+		Invoke(nameof(FinishGlitchMasterAnimation), 6f);
+	}
+
+	void FinishGlitchMasterAnimation()
+	{
+		GetComponent<Animator>().Play("GlitchMasterDisappear");
+	}
+
 	public void ResetPlayer()
 	{
 		player.transform.position = new Vector3(0, 3, 0);
