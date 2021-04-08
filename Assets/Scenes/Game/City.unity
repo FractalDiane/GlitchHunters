@@ -5225,11 +5225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
-      value: Pepoloni
+      value: Pizza-Loving Individual
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
-      value: Pepoloni
+      value: Pizza-Loving Individual
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
@@ -5445,7 +5445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4403618580515406322, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.336
+      value: 1.585
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
@@ -5492,7 +5492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941336, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].dialogueText
-      value: How did these cars even get here? Theres no road to here.
+      value: How did these cars even get here? There are no roads leading here...
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941337, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: m_RootOrder
@@ -5989,7 +5989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].dialogueText
-      value: Bruh the devs totally messed up this parking garage.
+      value: Bruh... the devs totally messed up this parking garage.
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[10].speakerName
@@ -6953,7 +6953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4403618580515406322, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.339
+      value: 1.613
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
@@ -8522,11 +8522,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c7c4815ef6311cb41ae90d55b10f091b, type: 2}
     - target: {fileID: 1290268953411352940, guid: 5b06ea15d88f61148a1035280d23417d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9
+      value: -11.29
       objectReference: {fileID: 0}
     - target: {fileID: 1290268953411352940, guid: 5b06ea15d88f61148a1035280d23417d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.4
+      value: 13.88
       objectReference: {fileID: 0}
     - target: {fileID: 1442450553484104045, guid: 5b06ea15d88f61148a1035280d23417d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8998,11 +8998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
-      value: Cheese Grater
+      value: Cheesegrater
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
-      value: Cheese
+      value: Cheesegrater
       objectReference: {fileID: 0}
     - target: {fileID: 2545251695680300589, guid: b2b2a286e823c7849b668c47e43aa945, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[2].speakerName
@@ -10563,20 +10563,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941336, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].speakerName
-      value: TechGuy
+      value: Techy Guy
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941336, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].speakerName
-      value: TechGuy
+      value: Techy Guy
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941336, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[0].dialogueText
-      value: You can jump while you are grounded, but if you jump up a slope are
-        you jumping and grounded at the same time?
+      value: You can jump while you're grounded, but if you jump up a slope are you
+        jumping and grounded at the same time?
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941336, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}
       propertyPath: dialogueSets.Array.data[0].dialogue.Array.data[1].dialogueText
-      value: It turns out that jumping up slopes can stack. So spam on big steep
+      value: It turns out that jumping up slopes can stack. So spam jump on big steep
         slopes for massive jumps.
       objectReference: {fileID: 0}
     - target: {fileID: 412538447890941337, guid: 81e37de7f9f016c459070632f31d4b27, type: 3}

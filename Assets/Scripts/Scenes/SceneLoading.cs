@@ -13,8 +13,6 @@ public class SceneLoading : MonoBehaviour
 
 	[SerializeField]
 	GameObject blockToHide = null;
-	[SerializeField]
-	GameObject sceneTransition = null;
 
 	bool loaded = false;
 

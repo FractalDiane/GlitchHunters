@@ -37,8 +37,6 @@ public class Dialogue : MonoBehaviour
 
 	float soundPitch = 1f;
 	public float SoundPitch { set => soundPitch = value; }
-
-	float pitchVariance = 0.02f;
 	
 	void Start()
 	{
